@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — YT Transcript Search</title>
+  <meta name="description" content="Complete user guide for YT Transcript Search: load transcripts, search, Timestamp Links, Teleprompter, export, themes, and keyboard shortcuts." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon_128x128.png" />
+  <style>
+    .guide-section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    .guide-section:last-of-type { border-bottom: none; }
+    .guide-img { border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 16px 48px rgba(0,0,0,0.45); margin: 28px 0 12px; max-width: 100%; }
+    .guide-caption { font-size: 13px; color: var(--muted); text-align: left; margin-bottom: 28px; }
+    .guide-body p { margin-bottom: 14px; }
+    .guide-body strong { color: var(--text); }
+    .guide-list { list-style: none; margin: 12px 0 20px; }
+    .guide-list li { padding: 6px 0 6px 22px; position: relative; }
+    .guide-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .guide-list li strong { color: var(--text); }
+    .tip-box {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 18px; margin: 18px 0 24px; max-width: 640px;
+    }
+    .tip-box-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .tip-box p { font-size: 14px; color: var(--muted2); line-height: 1.6; margin: 0; }
+    .pro-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;
+      background: rgba(232,197,71,0.12); color: var(--accent); border: 1px solid rgba(232,197,71,0.25);
+      vertical-align: middle; margin-left: 6px;
+    }
+    .quick-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px; background: var(--border); border-radius: 14px; overflow: hidden; margin: 28px 0 8px;
+    }
+    .quick-step { background: var(--surface); padding: 24px 20px; }
+    .quick-step-num { font-family: var(--font-head); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 10px; display: block; }
+    .quick-step-title { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .quick-step-desc { font-size: 13px; color: var(--muted2); line-height: 1.55; }
+    .shortcut-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin-top: 20px; }
+    .shortcut-row {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .shortcut-label { font-size: 14px; color: var(--muted2); }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+    .toc a {
+      display: inline-block; padding: 6px 12px; border-radius: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      font-size: 13px; font-weight: 500; color: var(--muted2); text-decoration: none;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .toc a:hover { color: var(--accent); border-color: rgba(232,197,71,0.35); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <img src="icon_128x128.png" alt="" class="nav-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="nav-banner"/>
+  </a>
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="how-it-works.html" class="active">How It Works</a></li>
+    <li><a href="free_vs_pro.html">Free vs Pro</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="purchase.html" class="nav-cta">★ Go Pro</a>
+</div></nav>
+
+<div class="page-hero"><div class="page">
+  <span class="eyebrow">How It Works</span>
+  <h1 class="section-title">From install to advanced workflows</h1>
+  <p class="section-sub">A complete guide to YT Transcript Search — searching, Timestamp Links, Teleprompter, export, themes, and more.</p>
+  <div class="toc">
+    <a href="#quick">Quick start</a>
+    <a href="#interface">Interface</a>
+    <a href="#load">Load transcript</a>
+    <a href="#search">Search</a>
+    <a href="#timestamps">Timestamp Links</a>
+    <a href="#view">View &amp; playback</a>
+    <a href="#themes">Themes &amp; layout</a>
+    <a href="#teleprompter">Teleprompter</a>
+    <a href="#export">Export</a>
+    <a href="#pro">Free vs Pro</a>
+    <a href="#shortcuts">Shortcuts</a>
+    <a href="#tips">Tips</a>
+  </div>
+</div></div>
+
+<!-- Quick start -->
+<div class="guide-section" id="quick"><div class="page">
+  <span class="eyebrow">Quick start</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Up and running in under a minute</h2>
+  <div class="quick-steps">
+    <div class="quick-step">
+      <span class="quick-step-num">01</span>
+      <div class="quick-step-title">Install</div>
+      <p class="quick-step-desc">Add the extension from the Chrome Web Store or Edge Add-ons. No account required.</p>
+    </div>
+    <div class="quick-step">
+      <span class="quick-step-num">02</span>
+      <div class="quick-step-title">Open a video</div>
+      <p class="quick-step-desc">Go to any YouTube video with captions and click the extension icon.</p>
+    </div>
+    <div class="quick-step">
+      <span class="quick-step-num">03</span>
+      <div class="quick-step-title">Load transcript</div>
+      <p class="quick-step-desc">Click Load Transcript. The full timed transcript appears in seconds.</p>
+    </div>
+    <div class="quick-step">
+      <span class="quick-step-num">04</span>
+      <div class="quick-step-title">Search &amp; jump</div>
+      <p class="quick-step-desc">Type any word or phrase. Click a result to jump straight to that moment.</p>
+    </div>
+  </div>
+</div></div>
+
+<!-- Interface -->
+<div class="guide-section" id="interface"><div class="page">
+  <span class="eyebrow">Interface</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">The overlay at a glance</h2>
+  <div class="guide-body">
+    <p>The panel is movable (drag the top bar) and resizable (drag edges or corners). The default theme on first load is <strong>Deep Ocean</strong>.</p>
+  </div>
+  <img class="guide-img" src="mainUI_pro.png" alt="YT Transcript Search main interface — Deep Ocean theme" />
+  <p class="guide-caption">Main interface in the default Deep Ocean theme — colour-coded Timestamp Links, highlighted matches, Append Search active.</p>
+  <ul class="guide-list">
+    <li><strong>Top bar</strong> — Logo, website &amp; channel links, opacity slider, theme picker, layout A/B slots, minimise, and Settings/Help (⚙).</li>
+    <li><strong>URL bar</strong> — Paste a video URL, lock it (Pro), and Load Transcript.</li>
+    <li><strong>Video info row</strong> — Title, channel, duration (and the minimap show/hide ▾ control).</li>
+    <li><strong>Left pane — Timestamp Links</strong> — Colour-coded search batches and manual entries, with Select All, Delete, Prev/Next.</li>
+    <li><strong>Right pane</strong> — Search field, case toggle, Search/Clear, view mode, font size, Teleprompter (Pro), sync offsets, transcript, minimap, and transport controls.</li>
+    <li><strong>Bottom bar</strong> — Export, Pro licence button, and noticeboard.</li>
+  </ul>
+</div></div>
+
+<!-- Load -->
+<div class="guide-section" id="load"><div class="page">
+  <span class="eyebrow">Loading a transcript</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Straight from YouTube’s captions</h2>
+  <div class="guide-body">
+    <p>Transcripts come from YouTube’s own caption data. On a watch page, click <strong>Load Transcript</strong>. You can also paste any watch URL into the URL field.</p>
+  </div>
+  <ul class="guide-list">
+    <li>Once loaded, title, channel, and duration appear. Click any transcript line to seek the video.</li>
+    <li><strong>Language / caption-track picker</strong> <span class="pro-tag">★ Pro</span> — Long-press Load Transcript to choose among available languages and tracks (official, auto-generated, etc.).</li>
+    <li><strong>URL lock</strong> <span class="pro-tag">★ Pro</span> — Long-press the lock icon. When locked, the URL and transcript stay frozen even if you navigate to another video. Useful for screen capture or multi-tab comparison.</li>
+  </ul>
+  <img class="guide-img" src="lang-menu.png" alt="Language selection menu" style="max-width:280px;" />
+  <p class="guide-caption">Language selection menu — choose the caption track that best matches the video.</p>
+</div></div>
+
+<!-- Search -->
+<div class="guide-section" id="search"><div class="page">
+  <span class="eyebrow">Searching</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Find every occurrence instantly</h2>
+  <div class="guide-body">
+    <p>Type a term or phrase and press Enter or click Search. Matches are highlighted in the transcript with colour-coded backgrounds that match each search batch.</p>
+  </div>
+  <ul class="guide-list">
+    <li><strong>Case sensitivity</strong> — Toggle with the Aa button.</li>
+    <li><strong>Whole-word matching</strong> — Available as a persisted preference.</li>
+    <li><strong>Search (A) / Append mode</strong> <span class="pro-tag">★ Pro</span> — Long-press Search to toggle. When active, the button shows “Search (A)” and new results are added to the existing Timestamp Links list instead of replacing it.</li>
+    <li><strong>History</strong> — Recall previous queries. Pro users get a longer history depth.</li>
+    <li><strong>Undo / Redo</strong> — Ctrl+Z steps back through search states; Ctrl+Shift+Z or Ctrl+Y steps forward.</li>
+  </ul>
+</div></div>
+
+<!-- Timestamp Links -->
+<div class="guide-section" id="timestamps"><div class="page">
+  <span class="eyebrow">Timestamp Links</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Build a curated list of moments</h2>
+  <div class="guide-body">
+    <p>Every search creates a coloured batch in the left pane. Manually added lines appear under a “MANUALLY CREATED” header.</p>
+  </div>
+  <ul class="guide-list">
+    <li>Checkboxes control which entries are included when you export Timestamp Links.</li>
+    <li>Select All / None, Delete, and Prev / Next for navigation and bulk actions.</li>
+    <li>Click a header arrow to expand or collapse a batch; click any entry to seek the video.</li>
+    <li>Add a transcript line manually to the list from the export context menu <span class="pro-tag">★ Pro</span>.</li>
+  </ul>
+</div></div>
+
+<!-- View & playback -->
+<div class="guide-section" id="view"><div class="page">
+  <span class="eyebrow">View &amp; playback</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Read, follow, and control the video</h2>
+  <ul class="guide-list">
+    <li><strong>View modes</strong> — Toggle Line-by-line and Continuous text.</li>
+    <li><strong>Font size</strong> — Size slider, or Ctrl + scroll over the transcript. Ctrl+0 or the reset button restores default.</li>
+    <li><strong>Minimap</strong> <span class="pro-tag">★ Pro</span> — Vertical strip of coloured dots for every Timestamp Link match. Click a dot to jump. Show/hide with the ▾ button at the far right of the video-info row (Title / Channel / Duration). Preference is remembered.</li>
+    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to Teleprompter and export.</li>
+    <li><strong>Following</strong> — Transcript auto-scrolls to keep the current spoken line in view.</li>
+    <li><strong>Play / Pause / Stop</strong> — Control the video from the overlay.</li>
+    <li><strong>[ In ] / [ Out ]</strong> — Mark a range for focused listening or looping.</li>
+    <li><strong>Selection / Copy mode</strong> — Toggle between “click to seek” and free text selection (copied on mouse release).</li>
+  </ul>
+</div></div>
+
+<!-- Themes -->
+<div class="guide-section" id="themes"><div class="page">
+  <span class="eyebrow">Themes, opacity &amp; layout</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Make it yours</h2>
+  <ul class="guide-list">
+    <li><strong>Themes</strong> — Open the palette button for multiple carefully designed themes (light, dark, and specialised colourways). Default on first load is Deep Ocean. Choice is remembered.</li>
+    <li><strong>Opacity</strong> — Let the video show through the panel to any degree.</li>
+    <li><strong>Layout slots A &amp; B</strong> — Short-press to recall a saved position and size; long-press to save the current layout.</li>
+    <li><strong>Minimise</strong> — Collapse to a small circular icon; click again to restore.</li>
+  </ul>
+</div></div>
+
+<!-- Teleprompter -->
+<div class="guide-section" id="teleprompter"><div class="page">
+  <span class="eyebrow">Teleprompter</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Scroll in sync with the video <span class="pro-tag">★ Pro</span></h2>
+  <div class="guide-body">
+    <p>Opens a dedicated floating panel that scrolls the transcript with the video — ideal for voice-overs, practice, or following along without the main overlay.</p>
+  </div>
+  <ul class="guide-list">
+    <li>Click Teleprompter in the main panel. Hover the teleprompter to reveal gear (settings) and close.</li>
+    <li>Settings update live and are saved automatically. Use 1-column or 2-column layout; position is remembered per mode.</li>
+  </ul>
+  <img class="guide-img" src="tp-settings.png" alt="Teleprompter Settings two-column layout" />
+  <p class="guide-caption">Teleprompter Settings (2-column) — view-mode profiles, lines, text, cascade, background, active-line highlight, sync offset.</p>
+  <ul class="guide-list">
+    <li><strong>Lines Before / After</strong> — Surrounding lines around the active line.</li>
+    <li><strong>Font, colour, bold, text shadow</strong> — Full appearance control.</li>
+    <li><strong>Scale font with panel</strong> — Font grows or shrinks as you resize the panel.</li>
+    <li><strong>Cascade</strong> — Non-active lines scale down and fade with distance.</li>
+    <li><strong>Background</strong> — Optional solid background with colour and opacity.</li>
+    <li><strong>Active line highlight &amp; border</strong> — Emphasise the current line.</li>
+    <li><strong>Anchor to video</strong> — Panel follows the video player while you scroll the page (Normal/Cinema only).</li>
+    <li><strong>View-mode profiles (N / C / F)</strong> — Short-press to recall, long-press to save configurations for YouTube’s Normal, Cinema, and Fullscreen layouts.</li>
+  </ul>
+  <img class="guide-img" src="tp-examples.png" alt="Teleprompter visual style examples" />
+  <p class="guide-caption">Examples of different teleprompter appearances — high-contrast dark panels to bright highlighted styles.</p>
+</div></div>
+
+<!-- Export -->
+<div class="guide-section" id="export"><div class="page">
+  <span class="eyebrow">Export</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Take your results with you</h2>
+  <div class="guide-body">
+    <p>Click Export for two columns: Timestamp Links and Full Transcript. When a sync offset is active, you can choose adjusted or original timestamps.</p>
+  </div>
+  <img class="guide-img" src="export-menu.png" alt="Export menu" style="max-width:420px;" />
+  <p class="guide-caption">Export menu — Timestamp Links left, full transcript right, plus synced vs original timestamps.</p>
+  <ul class="guide-list">
+    <li><strong>Timestamp Links</strong> — Text (.txt) and clipboard free; JSON and Markdown Pro; add line to list Pro.</li>
+    <li><strong>Full transcript</strong> — Plain text and clipboard free; SRT, CSV, JSON, Markdown Pro.</li>
+    <li>Only checked Timestamp Links entries are included when exporting links.</li>
+  </ul>
+</div></div>
+
+<!-- Free vs Pro -->
+<div class="guide-section" id="pro"><div class="page">
+  <span class="eyebrow">Free vs Pro</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Fully usable free; Pro unlocks the advanced tools</h2>
+  <div class="guide-body">
+    <p><strong>Free includes:</strong> load and search transcripts, colour-coded Timestamp Links, basic text export and clipboard, themes, opacity, layout A/B, font size, sync offset, transport controls, and Following mode.</p>
+    <p><strong>Pro unlocks:</strong> Teleprompter (full customisation and profiles), Append Search, URL lock, language picker, import chapters, manual add to Timestamp List, SRT/CSV/JSON/Markdown export, longer history and undo depth, and minimap.</p>
+    <p>Activate Pro with the ★ Pro button — enter the email used at purchase and your licence key. Verification is local and cryptographic.</p>
+  </div>
+  <div style="margin-top:20px;">
+    <a href="free_vs_pro.html" class="btn btn-outline">Explore Free vs Pro interactively →</a>
+  </div>
+</div></div>
+
+<!-- Shortcuts -->
+<div class="guide-section" id="shortcuts"><div class="page">
+  <span class="eyebrow">Keyboard shortcuts</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Keep your hands on the keyboard</h2>
+  <p class="guide-body" style="margin-bottom:8px;">Open the full list any time via the ⚙ button (Shortcuts tab).</p>
+  <div class="shortcut-grid">
+    <div class="shortcut-row"><span class="shortcut-label">Run search</span><span><kbd>Enter</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Previous search state</span><span><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Next search state</span><span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Seek to segment</span><span>Click line</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Font size up/down</span><span><kbd>Ctrl</kbd> + scroll</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Reset font size</span><span><kbd>Ctrl</kbd>+<kbd>0</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Reset sync offset</span><span>Double-click slider</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Save layout A or B</span><span>Long-press A / B</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Recall layout A or B</span><span>Short-press A / B</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Language picker</span><span>Long-press Load <span class="pro-tag">Pro</span></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Toggle Append Search</span><span>Long-press Search <span class="pro-tag">Pro</span></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Full clear (incl. transcript)</span><span>Long-press Clear</span></div>
+  </div>
+</div></div>
+
+<!-- Tips -->
+<div class="guide-section" id="tips"><div class="page">
+  <span class="eyebrow">Tips</span>
+  <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Work faster</h2>
+  <ul class="guide-list">
+    <li>Combine Append Search with colour batches to build a multi-topic timestamp list for one video.</li>
+    <li>Use Layout A for a compact side panel and Layout B for a larger research view.</li>
+    <li>Fix sync offset once — it applies to seeking, Following, Teleprompter, and exports.</li>
+    <li>Lock the URL for screen recording or comparing transcripts across tabs.</li>
+    <li>In Teleprompter, enable “Scale font with panel” and resize until the text feels right for your distance.</li>
+    <li>The minimap is especially useful on long videos with many scattered matches.</li>
+    <li>Export Markdown or JSON (Pro) when you want to process results in other tools.</li>
+  </ul>
+  <div class="tip-box">
+    <div class="tip-box-label">After an update</div>
+    <p>If the extension stops responding after an update, refresh the YouTube tab. That reloads the content script with the new version.</p>
+  </div>
+</div></div>
+
+<div class="page" style="padding-bottom:80px;">
+  <div class="cta-band cta-band-install">
+    <h2 class="cta-band-title">Start searching transcripts today</h2>
+    <p class="cta-band-sub">Free to install. Works on any YouTube video with captions</p>
+    <div class="install-row">
+      <a href="#" class="install-btn install-chrome" title="Coming soon" onclick="return false;">🌐 <span>Add to Chrome — Free<span class="install-sub">Awaiting Chrome Web Store approval</span></span></a>
+      <a href="#" class="install-btn install-edge" title="Coming soon" onclick="return false;">🔷 <span>Add to Edge — Free<span class="install-sub">Coming soon to Microsoft Edge Add-ons</span></span></a>
+      <a href="purchase.html" class="install-btn install-pro">★ Go Pro</a>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-logo">
+    <img src="icon_128x128.png" alt="" class="footer-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="footer-banner"/>
+  </div>
+    <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="free_vs_pro.html">Free vs Pro</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer-copy">© 2026 YT Transcript Search</p>
+</div></footer>
+</body>
+</html>

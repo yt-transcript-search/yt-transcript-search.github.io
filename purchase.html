@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase — YT Transcript Search</title>
+  <meta name="description" content="Buy a one-time YT Transcript Search Pro licence for 9.99. Pay with PayPal and receive your licence key by email." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon_128x128.png" />
+  <style>
+    .buy-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+    .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; position: relative; overflow: hidden; }
+    .price-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(232,197,71,0.08) 0%, transparent 70%); pointer-events: none; }
+    .price-card > * { position: relative; }
+    .price-amount { font-family: var(--font-head); font-size: 64px; font-weight: 700; line-height: 1; color: var(--accent); margin: 16px 0 10px; }
+    .price-terms { font-size: 14px; color: var(--muted2); margin-bottom: 26px; }
+    .price-includes { list-style: none; margin: 0 0 30px; padding: 22px 0 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
+    .price-includes li { font-size: 15px; color: var(--text); display: flex; gap: 10px; align-items: baseline; }
+    .price-includes li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    .paypal-btn { width: 100%; justify-content: center; }
+    .price-note { font-size: 13px; color: var(--muted); margin-top: 16px; line-height: 1.6; }
+    .buy-steps { display: flex; flex-direction: column; gap: 16px; }
+    .buy-step { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; gap: 18px; align-items: flex-start; }
+    .buy-step-num { font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-dim); border: 1px solid rgba(232,197,71,0.25); border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .buy-step-title { font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .buy-step-desc { font-size: 14px; color: var(--muted2); line-height: 1.6; }
+    .features-section { padding: 56px 0; border-top: 1px solid var(--border); }
+    .faq { display: flex; flex-direction: column; margin-top: 8px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q { font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+    .buy-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+    @media (max-width: 800px) { .buy-grid { grid-template-columns: 1fr; } .price-card { padding: 32px 24px; } }
+  </style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <img src="icon_128x128.png" alt="" class="nav-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="nav-banner"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="free_vs_pro.html">Free vs Pro</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="purchase.html" class="nav-cta">★ Go Pro</a>
+</div></nav>
+
+<div class="page-hero"><div class="page">
+  <span class="eyebrow">Purchase</span>
+  <h1 class="section-title">Get YT Transcript Search Pro</h1>
+  <p class="section-sub">A one-time payment unlocks every Pro feature for life. No subscription. Pay securely with PayPal and your licence key arrives by email.</p>
+</div></div>
+
+<section class="section"><div class="page">
+  <div class="buy-grid">
+
+    <!-- ── Price card ── -->
+    <div class="price-card">
+      <span class="badge pro">★ Pro licence</span>
+      <div class="price-amount">9.99</div>
+      <p class="price-terms">One-time payment · Lifetime licence · Delivered by email</p>
+      <ul class="price-includes">
+        <li>Teleprompter</li>
+        <li>Append Search</li>
+        <li>Advanced export: SRT, CSV, JSON and Markdown</li>
+        <li>URL lock</li>
+        <li>Language picker</li>
+        <li>Minimap, chapter import, longer history and undo depth</li>
+      </ul>
+      <!-- PAYPAL: replace the "#" below with your PayPal payment link (and remove the onclick) -->
+      <a href="#" class="btn btn-primary btn-lg paypal-btn" onclick="return false;">Pay with PayPal — 9.99</a>
+      <p class="price-note">Payment via PayPal. Licence key sent to the email you provide. We never see your card or PayPal login details.</p>
+      <p class="price-note" style="margin-top:10px;">The amount shown on this page is in euros. When you pay, PayPal converts it to your own currency and shows the correct amount at checkout, before you confirm your payment.</p>
+    </div>
+
+    <!-- ── What happens next ── -->
+    <div>
+      <span class="eyebrow">What Happens Next</span>
+      <div class="buy-steps">
+        <div class="buy-step">
+          <span class="buy-step-num">1</span>
+          <div>
+            <div class="buy-step-title">Pay with PayPal</div>
+            <p class="buy-step-desc">Click the PayPal button and complete your payment. In the payment note, include the email address you want your licence key sent to.</p>
+          </div>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">2</span>
+          <div>
+            <div class="buy-step-title">Receive your licence key</div>
+            <p class="buy-step-desc">Your key is emailed to you, typically within 8 hours. If it hasn't arrived, check your spam folder first.</p>
+          </div>
+        </div>
+        <div class="buy-step">
+          <span class="buy-step-num">3</span>
+          <div>
+            <div class="buy-step-title">Activate it in the extension</div>
+            <p class="buy-step-desc">Click ★ Pro in the bottom bar of the overlay, then enter the same email address and your licence key. The Pro features unlock.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<div class="features-section">
+  <div class="page">
+    <span class="eyebrow">Before You Buy</span>
+    <h2 class="section-title" style="font-size:clamp(22px,3vw,30px); margin-bottom:20px;">Common questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Is this a subscription?</div>
+        <p class="faq-a">No. Pro is a single payment of 9.99 for a lifetime licence. There is nothing to renew.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I try it first?</div>
+        <p class="faq-a">The free version includes all the core features, so you can use the extension before deciding. See <a href="free_vs_pro.html">Free vs Pro</a> for a side-by-side look at what Pro adds.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need an account?</div>
+        <p class="faq-a">No. There is no account to create. Your licence is tied to the email address you give with your payment, and you enter it with your key in the extension to activate Pro.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I paid but haven't received my key.</div>
+        <p class="faq-a">Keys are delivered manually, typically within 8 hours. Check your spam folder, and if it's been longer than that, email us at <a href="mailto:yt.transcript.search@gmail.com">yt.transcript.search@gmail.com</a> with your PayPal payment reference and we'll send it straight away.</p>
+      </div>
+    </div>
+    <div class="buy-links">
+      <a href="pro.html" class="btn btn-outline">What's included in Pro →</a>
+      <a href="faq.html" class="btn btn-outline">More answers →</a>
+      <a href="contact.html" class="btn btn-outline">Contact us →</a>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-logo">
+    <img src="icon_128x128.png" alt="" class="footer-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="footer-banner"/>
+  </div>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="free_vs_pro.html">Free vs Pro</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer-copy">© 2026 YT Transcript Search</p>
+</div></footer>
+</body>
+</html>
