@@ -9,7 +9,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #0d0d0f;
+  --bg:         #1a1e2c;
   --surface:    #16161a;
   --surface2:   #1e1e26;
   --border:     #2a2a35;
@@ -30,7 +30,9 @@
 
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg); color: var(--text);
+  /* Blue gradient background image (root folder). --bg is the fallback colour while it loads. */
+  background: var(--bg) url('ytts-background-blue-gradient.jpg') center top / cover no-repeat fixed;
+  color: var(--text);
   font-family: var(--font-body); font-size: 16px;
   line-height: 1.6; -webkit-font-smoothing: antialiased;
 }
@@ -84,7 +86,7 @@ img { max-width: 100%; display: block; }
 .page { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
 /* ── Section spacing ── */
-.section { padding: 80px 0; }
+.section { padding: 48px 0; }
 .section + .section { border-top: 1px solid var(--border); }
 
 /* ── Eyebrow ── */
@@ -103,7 +105,7 @@ img { max-width: 100%; display: block; }
 }
 .section-sub {
   font-size: 17px; color: var(--muted2);
-  line-height: 1.65; margin-bottom: 48px; /* full width of .page — no max-width */
+  line-height: 1.65; margin-bottom: 32px; /* full width of .page — no max-width */
 }
 
 /* ── Page text: ONE paragraph style used everywhere (intro text, guide text,
@@ -196,13 +198,13 @@ img { max-width: 100%; display: block; }
 .lock  { color: var(--muted); font-size: 14px; }
 
 /* ── Page hero ── */
-.page-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+.page-hero { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
 
 /* ── CTA band ── */
 .cta-band {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 20px; padding: 64px 48px; text-align: center;
-  position: relative; overflow: hidden; margin: 80px 0;
+  position: relative; overflow: hidden; margin: 48px 0;
 }
 .cta-band::before {
   content: ''; position: absolute; inset: 0;
@@ -255,7 +257,7 @@ kbd { display: inline-block; padding: 3px 8px; background: var(--surface2); bord
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .nav-links { display: none; }
-  .section { padding: 56px 0; }
+  .section { padding: 36px 0; }
   .section-sub, .guide-body, .guide-body p, .guide-list li, .policy-body p, .hero-hook p, .faq-a { font-size: 15px; }
   .cta-band { padding: 40px 24px; }
 }
