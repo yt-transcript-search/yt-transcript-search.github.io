@@ -1,6 +1,6 @@
 # YT Transcript Search — Website
 
-The official website for **YT Transcript Search**, a browser extension that adds a search overlay to YouTube. Load a video's transcript, search it for any word or phrase, jump straight to the moment it was said, collect Timestamp Links, and export the results.
+The official website for **YT Transcript Search**, a browser extension that adds a Transcript search overlay to YouTube. Load a video's Transcript, search for any word or phrase and qualifying Timestamp Links will be displayed. Click on any entry to jump straight to the moment in the video. Both the full Transcript or your Timestamp Links can be exported in numerous formats.
 
 This repository contains the website only. It is a simple static site (plain HTML and CSS, no build step) and is hosted free with GitHub Pages.
 
@@ -11,7 +11,6 @@ This repository contains the website only. It is a simple static site (plain HTM
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
-| Features | `features.html` |
 | How It Works | `how-it-works.html` |
 | Free vs Pro | `free_vs_pro.html` |
 | Pro | `pro.html` |
@@ -30,7 +29,8 @@ The pages use these image files, which must stay in the same folder as the pages
 - `icon_128x128.png`
 - `transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png`
 - `mainUI_free.png`
-- `mainUI_pro.png`
+- `mainUI_pro.png
+-  mainUI_on_yt_pro.png`
 - `export-menu.png`
 - `lang-menu.png`
 - `tp-examples.png`
