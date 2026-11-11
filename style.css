@@ -234,8 +234,8 @@ img { max-width: 100%; display: block; }
 .install-btn:hover { text-decoration: none; }
 .install-chrome { background: var(--accent); color: #000; }
 .install-chrome:hover { filter: brightness(0.9); }
-.install-edge { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
-.install-edge:hover { border-color: var(--accent); color: var(--accent); }
+.install-edge { background: var(--accent); color: #000; }
+.install-edge:hover { filter: brightness(0.9); }
 .install-pro { background: var(--accent); color: #000; font-size: 17px; letter-spacing: 0.02em; padding: 14px 32px; }
 .install-pro:hover { filter: brightness(0.9); }
 .install-sub { font-size: 12px; opacity: 0.7; font-weight: 500; display: block; }

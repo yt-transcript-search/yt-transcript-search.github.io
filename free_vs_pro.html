@@ -20,9 +20,11 @@
   }
   .tier-toggle button {
     position: relative; z-index: 2; border: none; background: transparent;
-    font-family: var(--font-head); font-size: 18px; font-weight: 700;
-    color: var(--muted2); padding: 14px 44px; border-radius: 999px; cursor: pointer;
+    font-family: var(--font-head); font-size: 16px; font-weight: 700;
+    color: var(--muted2); padding: 10px 20px; border-radius: 999px; cursor: pointer;
     transition: color .2s; letter-spacing: .02em;
+    flex: 1 1 0; width: 150px; line-height: 1.15; text-align: center;
+    display:flex; align-items:center; justify-content:center;
   }
   .tier-toggle button.active { color: #000; }
   .tier-toggle .pill {
@@ -108,8 +110,8 @@
 <div class="fvp-hero"><div class="page">
   <span class="eyebrow">Free vs Pro</span>
   <h1 class="section-title">See the difference for yourself</h1>
-  <p class="section-sub">Toggle between Free and Pro version and hover over anything you're curious about and its details will be shown in the panel to the right of the screen.</p>
-  <p class="section-sub" style="margin-top:-8px;">Both versions share the same promise: no AI subscription, no account and nothing to sign in to.</p>
+  <p class="section-sub" style="margin-bottom:0;">Toggle between Free and Pro version and hover over anything you're curious about and its details will be shown in the panel to the right of the screen.</p>
+  <p class="section-sub" style="margin-top:0;">Both versions share the same promise: no AI subscription, no account and nothing to sign in to.</p>
 </div></div>
 
 <div class="fvp-wide">
@@ -117,8 +119,8 @@
   <div class="tier-toggle-wrap">
     <div class="tier-toggle" id="tierToggle">
       <div class="pill"></div>
-      <button type="button" data-tier="free" class="active">Free</button>
-      <button type="button" data-tier="pro">Pro</button>
+      <button type="button" data-tier="free" class="active">Free and Pro</button>
+      <button type="button" data-tier="pro">Pro only</button>
     </div>
   </div>
   <p class="tier-hint">
@@ -252,7 +254,7 @@ const HOTSPOTS = {
       "box": {
         "left": "0.993%",
         "top": "15.542%",
-        "width": "98.174%",
+        "width": "97.801%",
         "height": "3.249%"
       },
       "dot": {
@@ -384,7 +386,7 @@ const HOTSPOTS = {
       "icon": "↩️",
       "tier": "free",
       "title": "Transcript font reset",
-      "desc": "As well as being able to double-clcik the font size slider to reset the font in the Transcript shown below , this button will do the same thing",
+      "desc": "Resets <i>Transcript </i>font to default size",
       "box": {
         "left": "51.432%",
         "top": "26.914%",
@@ -437,10 +439,10 @@ const HOTSPOTS = {
       "title": "Export",
       "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON, and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the Transcript and your Timestamp Links.&nbsp;</div><div><b>Pro</b> users can also import JSON format files</div>",
       "box": {
-        "left": "2.089%",
+        "left": "2.054%",
         "top": "93.747%",
-        "width": "7.788%",
-        "height": "4.664%"
+        "width": "7.810%",
+        "height": "4.699%"
       },
       "dot": {
         "x": 0,
@@ -454,10 +456,10 @@ const HOTSPOTS = {
       "title": "Noticeboard",
       "desc": "Announcements from the developer — pulses gold when there's something new to read",
       "box": {
-        "left": "17.784%",
-        "top": "93.893%",
-        "width": "3.851%",
-        "height": "4.190%"
+        "left": "17.767%",
+        "top": "93.978%",
+        "width": "3.895%",
+        "height": "4.050%"
       },
       "dot": {
         "x": 0,
@@ -469,7 +471,7 @@ const HOTSPOTS = {
       "icon": "🔆",
       "tier": "free",
       "title": "Opacity",
-      "desc": "Reduce the overlay's opacity to see the video playing underneath it. Simply double-click to reset",
+      "desc": "Reduce the overlay's opacity to see the video playing underneath it.",
       "box": {
         "left": "82.848%",
         "top": "2.082%",
@@ -486,7 +488,7 @@ const HOTSPOTS = {
       "icon": "🎨",
       "tier": "free",
       "title": "Theme selector",
-      "desc": "Choose from a selection of thoughtfully designed Themes",
+      "desc": "Choose from a selection of Themes",
       "box": {
         "left": "93.162%",
         "top": "2.075%",
@@ -621,8 +623,8 @@ const HOTSPOTS = {
     {
       "icon": "⏱️",
       "tier": "free",
-      "title": "Undo/Redo",
-      "desc": "Made a mistake? Just Undo",
+      "title": "Prev/Next",
+      "desc": "Like Undo and Redo, a way of removing the last Search results",
       "box": {
         "left": "86.251%",
         "top": "24.054%",
@@ -637,7 +639,7 @@ const HOTSPOTS = {
     },
     {
       "icon": "🕐",
-      "tier": "pro",
+      "tier": "free",
       "title": "Search history selector",
       "desc": "Select from previous searches you have made",
       "box": {
@@ -675,9 +677,9 @@ const HOTSPOTS = {
       "title": "Information",
       "desc": "Numerous messages will be shown as the tool functions",
       "box": {
-        "left": "78.314%",
+        "left": "78.473%",
         "top": "94.244%",
-        "width": "20.661%",
+        "width": "20.601%",
         "height": "3.671%"
       },
       "dot": {
@@ -690,11 +692,11 @@ const HOTSPOTS = {
       "icon": "⭐",
       "tier": "free",
       "title": "Pro",
-      "desc": "Either gives you the means go Pro or shows your Pro licence is active. Click any time to manage or deactivate it",
+      "desc": "Shows your licence is active. Click any time to manage or deactivate it",
       "box": {
-        "left": "10.708%",
-        "top": "93.759%",
-        "width": "6.254%",
+        "left": "10.650%",
+        "top": "93.739%",
+        "width": "6.341%",
         "height": "4.711%"
       },
       "dot": {
@@ -762,9 +764,9 @@ const HOTSPOTS = {
       "title": "Load Transcript",
       "desc": "<b>Short-press</b> to load the default Transcript.&nbsp;<div><b style=\"\">Long-press </b>(Pro feature)<b style=\"\">&nbsp;</b>enables you to select from every language track YouTube has for that video. The total language count is shown in brackets</div>",
       "box": {
-        "left": "84.330%",
+        "left": "84.390%",
         "top": "9.164%",
-        "width": "14.335%",
+        "width": "14.231%",
         "height": "4.904%"
       },
       "dot": {
@@ -779,10 +781,10 @@ const HOTSPOTS = {
       "title": "Youtube Video Details",
       "desc": "Shows the title, channel, and duration of the currently loaded video",
       "box": {
-        "left": "0.866%",
-        "top": "15.913%",
-        "width": "83.195%",
-        "height": "4.873%"
+        "left": "1.167%",
+        "top": "16.307%",
+        "width": "82.400%",
+        "height": "4.259%"
       },
       "dot": {
         "x": -0.23367638974651372,
@@ -1018,9 +1020,9 @@ const HOTSPOTS = {
       "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON, and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the Transcript and your Timestamp Links.&nbsp;</div><div><b>Pro</b>&nbsp;users can also import JSON format files</div>",
       "box": {
         "left": "9.519%",
-        "top": "93.719%",
+        "top": "93.594%",
         "width": "7.468%",
-        "height": "4.837%"
+        "height": "5.013%"
       },
       "dot": {
         "x": -0.36913581614083274,
@@ -1035,7 +1037,7 @@ const HOTSPOTS = {
       "desc": "Shows your licence is active. Click any time to manage or deactivate it",
       "box": {
         "left": "17.645%",
-        "top": "93.642%",
+        "top": "93.618%",
         "width": "7.401%",
         "height": "5.017%"
       },
@@ -1052,7 +1054,7 @@ const HOTSPOTS = {
       "desc": "News about <i>YT Transcript Search </i>will appear in here and let you know with a pulsating a gold border",
       "box": {
         "left": "25.915%",
-        "top": "93.977%",
+        "top": "94.001%",
         "width": "3.853%",
         "height": "4.196%"
       },
@@ -1066,11 +1068,11 @@ const HOTSPOTS = {
       "icon": "🔆",
       "tier": "pro",
       "title": "Opacity slider",
-      "desc": "Reduce the overlay's opacity to see the video playing underneath it. Simply double-click to reset",
+      "desc": "Reduce the overlay's opacity to see the video playing underneath it",
       "box": {
         "left": "77.421%",
         "top": "2.240%",
-        "width": "9.665%",
+        "width": "9.599%",
         "height": "3.827%"
       },
       "dot": {
@@ -1083,7 +1085,7 @@ const HOTSPOTS = {
       "icon": "🎨",
       "tier": "pro",
       "title": "Theme selector",
-      "desc": "Choose from a selection of thoughtfully designed Themes",
+      "desc": "Choose from a selection of Themes",
       "box": {
         "left": "87.388%",
         "top": "2.238%",
@@ -1102,9 +1104,9 @@ const HOTSPOTS = {
       "title": "Layout slots (A/B)",
       "desc": "Save the overlay's exact position and size to slot A or B.<div><b>Short press</b> : Change to stored profile</div><div><b>Long-press</b> : Store profile</div><div>Handy for switching between two setups instantly</div>",
       "box": {
-        "left": "90.360%",
+        "left": "90.340%",
         "top": "2.250%",
-        "width": "5.415%",
+        "width": "5.481%",
         "height": "3.817%"
       },
       "dot": {
@@ -1151,7 +1153,7 @@ const HOTSPOTS = {
       "icon": "↩️",
       "tier": "pro",
       "title": "Transcript font reset",
-      "desc": "As well as being able to double-clcik the font size slider to reset the font in the Transcript shown below , this button will do the same thing",
+      "desc": "This will reset the <i>Transcript</i> font back to its default size",
       "box": {
         "left": "55.780%",
         "top": "29.641%",
@@ -1218,8 +1220,8 @@ const HOTSPOTS = {
     {
       "icon": "↩️",
       "tier": "pro",
-      "title": "Undo/Redo",
-      "desc": "Made a mistake? Just Undo",
+      "title": "Prev/Next",
+      "desc": "Like Undo and Redo, a way of removing the last Search results",
       "box": {
         "left": "86.587%",
         "top": "26.828%",
@@ -1358,9 +1360,9 @@ const HOTSPOTS = {
       "desc": "Numerous messages will be shown as the tool functions",
       "box": {
         "left": "90.045%",
-        "top": "94.640%",
+        "top": "94.690%",
         "width": "8.943%",
-        "height": "3.287%"
+        "height": "3.112%"
       },
       "dot": {
         "x": 0,
@@ -1372,9 +1374,9 @@ const HOTSPOTS = {
       "icon": "📑",
       "tier": "pro",
       "title": "Import Chapters",
-      "desc": "A Pro feature, when a video has Chapters created,&nbsp;<div>you will be able to import them and populate your Timestamp Links with its own 'Chapters' grouping</div>",
+      "desc": "A Pro feature, when a video has Chapters created, you will be able to import them and populate your <i>Timestamp Links</i> with its own 'Chapters' grouping",
       "box": {
-        "left": "84.438%",
+        "left": "84.548%",
         "top": "15.828%",
         "width": "14.198%",
         "height": "4.935%"
@@ -1389,7 +1391,7 @@ const HOTSPOTS = {
       "icon": "⬆️",
       "tier": "pro",
       "title": "Import",
-      "desc": "JSON format files created can be Imported also. This means you will be able to share files with other <b>PRO</b> users",
+      "desc": "JSON format files created can be Imported also. This means you will be able to share files with other <b>PRO</b> users.",
       "box": {
         "left": "1.408%",
         "top": "93.683%",

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How It Works — YT Transcript Search</title>
-  <meta name="description" content="Complete user guide for YT Transcript Search: load transcripts, search, Timestamp Links, Teleprompter, export, themes, and keyboard shortcuts." />
+  <meta name="description" content="Complete user guide for YT Transcript Search: load transcripts, search, Timestamp Links, Teleprompter, export, themes and keyboard shortcuts." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="icon_128x128.png" />
   <style>
@@ -20,6 +20,7 @@
     .guide-body strong { color: var(--text); }
     .guide-note { font-size: 14px; color: var(--muted2); margin: 4px 0 8px; } .guide-list { list-style: none; margin: 12px 0 20px; }
     .guide-list li { padding: 6px 0 6px 22px; position: relative; }
+    .guide-list.numbered li { padding-left: 0; } .guide-list.numbered li::before { content: none; }
     .guide-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .guide-list li strong { color: var(--text); }
     .tip-box {
@@ -81,13 +82,13 @@
 <div class="page-hero"><div class="page">
   <span class="eyebrow">How It Works</span>
   <h1 class="section-title">From install to advanced workflows</h1>
-  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — searching, Timestamp Links, Teleprompter, export, themes, and more.</p>
+  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — Searching, <em>Timestamp Links</em>, Teleprompter, Export, Themes and more</p>
   <div class="toc">
     <a href="#quick">Quick start</a>
     <a href="#interface">Interface</a>
-    <a href="#load">Load transcript</a>
+    <a href="#load">Load <em>Transcript</em></a>
     <a href="#search">Search</a>
-    <a href="#timestamps">Timestamp Links</a>
+    <a href="#timestamps"><em>Timestamp Links</em></a>
     <a href="#view">View &amp; playback</a>
     <a href="#themes">Themes &amp; layout</a>
     <a href="#teleprompter">Teleprompter</a>
@@ -106,22 +107,22 @@
     <div class="quick-step">
       <span class="quick-step-num">01</span>
       <div class="quick-step-title">Install</div>
-      <p class="quick-step-desc">Add the extension from the Chrome Web Store or Edge Add-ons. No account required.</p>
+      <p class="quick-step-desc">Add the extension from the Chrome Web Store or Edge Add-ons. No account required</p>
     </div>
     <div class="quick-step">
       <span class="quick-step-num">02</span>
       <div class="quick-step-title">Open a video</div>
-      <p class="quick-step-desc">Go to any YouTube video with captions and click the extension icon.</p>
+      <p class="quick-step-desc">Go to any YouTube video with captions and click the extension icon</p>
     </div>
     <div class="quick-step">
       <span class="quick-step-num">03</span>
-      <div class="quick-step-title">Load transcript</div>
-      <p class="quick-step-desc">Click Load Transcript. The full timed transcript appears in seconds.</p>
+      <div class="quick-step-title">Load <em>Transcript</em></div>
+      <p class="quick-step-desc">Click Load <em>Transcript</em>. The full timed <em>Transcript</em> appears in seconds</p>
     </div>
     <div class="quick-step">
       <span class="quick-step-num">04</span>
       <div class="quick-step-title">Search &amp; jump</div>
-      <p class="quick-step-desc">Type any word or phrase. Click a result to jump straight to that moment.</p>
+      <p class="quick-step-desc">Type any word or phrase. Click a result to jump straight to that moment</p>
     </div>
   </div>
 </div></div>
@@ -131,37 +132,37 @@
   <span class="eyebrow">Interface</span>
   <h2 class="section-title section-title-sm">The overlay at a glance</h2>
   <div class="guide-body">
-    <p>The panel is movable (drag the top bar) and resizable (drag edges or corners). The default theme on first load is <strong>Deep Ocean</strong>.</p>
+    <p>The panel is movable (drag the top bar) and resizable (drag edges or corners). The default theme on first load is <strong>Deep Ocean</strong></p>
   </div>
-  <img class="guide-img" src="mainUI_overview.png" alt="YT Transcript Search main interface with its main areas labelled: top bar, URL bar, video info row, Transcript viewer, Timestamp Links viewer and bottom bar" />
-  <p class="guide-caption">The overlay in the default Deep Ocean theme, with its main areas labelled.</p>
-  <ul class="guide-list">
-    <li><strong>Top bar</strong> — Logo, website &amp; YT channel links, Settings/Help (⚙), Opacity slider, Theme picker, Layout A/B slots and Minimise</li>
-    <li><strong>URL bar</strong> — Active YT video URL updated automatically, ‘URL Lock (Pro)’ and ‘Load Transcript’</li>
-    <li><strong>Video info row</strong> — Title, YT channel, Duration followed by ‘Load Chapters’ button (where applicable)</li>
-    <li><strong>Transcript viewer (left panel)</strong> — Search field, Search history selector, Case toggle, Search, Clear, View mode, Font size, Teleprompter (Pro), Timestamp Links/Selection Copy toggle, Sync offsets, Playback speed, Minimap show/hide, the loaded Transcript, Follow, Playback controls and In/Out Looping</li>
-    <li><strong>Timestamp Links viewer (right panel)</strong> — Colour-coded search batches and manual entries, with Select All/None, Delete, Undo/Redo</li>
-    <li><strong>Bottom bar</strong> — Import (Pro), Export, Pro licence button and Noticeboard</li>
+  <img class="guide-img" src="mainUI_overview.png" alt="YT Transcript Search main interface with its main areas numbered 1 to 6: top bar, URL bar, video info row, Transcript viewer, Timestamp Links viewer and bottom bar" />
+  <p class="guide-caption">The overlay in the default Deep Ocean theme, with its main areas labelled</p>
+  <ul class="guide-list numbered">
+    <li>1. <strong>Top bar</strong> — Logo, website &amp; YT channel links, Settings/Help (⚙), Opacity slider, Theme picker, Layout A/B slots and Minimise</li>
+    <li>2. <strong>URL bar</strong> — Active YT video URL updated automatically, ‘URL Lock (Pro)’ and ‘Load <em>Transcript</em>’</li>
+    <li>3. <strong>Video info row</strong> — Title, YT channel, Duration followed by ‘Import Chapters’ button (where applicable)</li>
+    <li>4. <strong><em>Transcript</em> viewer (left panel)</strong> — Search field, Search history selector, Case toggle, Search, Clear, View mode, Font size, Teleprompter (Pro), <em>Timestamp Links</em>/Selection Copy toggle, Sync offsets, Playback speed, Minimap show/hide, the loaded <em>Transcript</em>, Follow, Playback controls and In/Out Looping</li>
+    <li>5. <strong><em>Timestamp Links</em> viewer (right panel)</strong> — Colour-coded search batches and manual entries, with Select All/None, Delete, Undo/Redo</li>
+    <li>6. <strong>Bottom bar</strong> — Import (Pro), Export, Pro licence button and Noticeboard</li>
   </ul>
-  <p class="guide-note"><strong>Prefer the panels swapped?</strong> Just click the ⇄ button at the top of the divider between them. Everywhere on this website, &ldquo;left&rdquo; and &ldquo;right&rdquo; refer to the default arrangement with the Transcript panel on the left.</p>
+  <p class="guide-note"><strong>Prefer the panels swapped?</strong> Just click the ⇄ button at the top of the divider between them. Everywhere on this website, &ldquo;left&rdquo; and &ldquo;right&rdquo; refer to the default arrangement with the <em>Transcript</em> panel on the left</p>
   <p class="guide-note">&nbsp;</p>
-  <p class="guide-note">For a full explanation of each control, see the <a href="free_vs_pro.html">Free vs Pro</a> page.</p>
+  <p class="guide-note">For a full explanation of each control, see the <a href="free_vs_pro.html">Free vs Pro</a> page</p>
 </div></div>
 
 <!-- Load -->
 <div class="guide-section" id="load"><div class="page">
-  <span class="eyebrow">Loading a transcript</span>
+  <span class="eyebrow">Loading a <em>Transcript</em></span>
   <h2 class="section-title section-title-sm">Straight from YouTube’s captions</h2>
   <div class="guide-body">
-    <p>Transcripts come from YouTube’s own caption data. On a watch page, click <strong>Load Transcript</strong>. You can also paste any watch URL into the URL field.</p>
+    <p><em>Transcripts</em> come from YouTube’s own caption data. On a watch page, click <strong>Load <em>Transcript</em></strong>. You can also paste any watch URL into the URL field</p>
   </div>
   <ul class="guide-list">
-    <li>Once loaded, title, channel, and duration appear. Click any transcript line to seek the video.</li>
-    <li><strong>Language / caption-track picker</strong> <span class="pro-tag">★ Pro</span> — Long-press Load Transcript to choose among available languages and tracks (official, auto-generated, etc.).</li>
-    <li><strong>URL lock</strong> <span class="pro-tag">★ Pro</span> — Long-press the lock icon. When locked, the URL and transcript stay frozen even if you navigate to another video. Useful for screen capture or multi-tab comparison.</li>
+    <li>Once loaded, title, channel and duration appear. Click any <em>Transcript</em> line to seek the video</li>
+    <li><strong>Language / caption-track picker</strong> <span class="pro-tag">★ Pro</span> — Long-press Load <em>Transcript</em> to choose among available languages and tracks (official, auto-generated, etc.)</li>
+    <li><strong>URL lock</strong> <span class="pro-tag">★ Pro</span> — Long-press the lock icon. When locked, the URL and <em>Transcript</em> stay frozen even if you navigate to another video. Useful for screen capture or multi-tab comparison</li>
   </ul>
   <img class="guide-img" src="lang-menu.png" alt="Language selection menu" style="max-width:280px;" />
-  <p class="guide-caption">Language selection menu — choose the caption track that best matches the video.</p>
+  <p class="guide-caption">Language selection menu — choose the caption track that best matches the video</p>
 </div></div>
 
 <!-- Search -->
@@ -169,48 +170,48 @@
   <span class="eyebrow">Searching</span>
   <h2 class="section-title section-title-sm">Find every occurrence instantly</h2>
   <div class="guide-body">
-    <p>Type a term or phrase and press Enter or click Search. Matches are highlighted in the transcript with colour-coded backgrounds that match each search batch.</p>
+    <p>Type a term or phrase and press Enter or click Search. Matches are highlighted in the <em>Transcript</em> with colour-coded backgrounds that match each search batch</p>
   </div>
   <ul class="guide-list">
-    <li><strong>Case sensitivity</strong> — Toggle with the Aa button.</li>
-    <li><strong>Whole-word matching</strong> — Available as a persisted preference.</li>
-    <li><strong>Search (A) / Append mode</strong> <span class="pro-tag">★ Pro</span> — Long-press Search to toggle. When active, the button shows “Search (A)” and new results are added to the existing Timestamp Links list instead of replacing it.</li>
-    <li><strong>History</strong> — Recall previous queries. Pro users get a longer history depth.</li>
-    <li><strong>Undo / Redo</strong> — Ctrl+Z steps back through search states; Ctrl+Shift+Z or Ctrl+Y steps forward.</li>
+    <li><strong>Case sensitivity</strong> — Toggle with the Aa button</li>
+    <li><strong>Whole-word matching</strong> — Available as a persisted preference</li>
+    <li><strong>Search (A) / Append mode</strong> <span class="pro-tag">★ Pro</span> — Long-press Search to toggle. When active, the button shows “Search (A)” and new results are added to the existing <em>Timestamp Links</em> list instead of replacing it</li>
+    <li><strong>History</strong> — Recall previous queries. Pro users get a longer history depth</li>
+    <li><strong>Undo/Redo</strong> — Ctrl+Z steps back through search states; Ctrl+Shift+Z or Ctrl+Y steps forward</li>
   </ul>
 </div></div>
 
 <!-- Timestamp Links -->
 <div class="guide-section" id="timestamps"><div class="page">
-  <span class="eyebrow">Timestamp Links</span>
+  <span class="eyebrow"><em>Timestamp Links</em></span>
   <h2 class="section-title section-title-sm">Build a curated list of moments</h2>
   <div class="guide-body">
-    <p>Every search creates a coloured batch in the Timestamp Links panel (on the right by default). Manually added lines appear under a “MANUALLY CREATED” header.</p>
+    <p>Every search creates a coloured batch in the <em>Timestamp Links</em> panel (on the right by default). Manually added lines appear under a “MANUALLY CREATED” header</p>
   </div>
   <ul class="guide-list">
-    <li>Checkboxes control which entries are included when you export Timestamp Links.</li>
-    <li>Select All / None, Delete, and Prev / Next for navigation and bulk actions.</li>
-    <li>Click a header arrow to expand or collapse a batch; click any entry to seek the video.</li>
-    <li>Add a transcript line manually to the list from the export context menu <span class="pro-tag">★ Pro</span>.</li>
-    <li><strong>Bookmark</strong> <span class="pro-tag">★ Pro</span> — When you start jumping around with Timestamp Links, the place you were watching is saved as a blue <strong>Bookmark</strong> at the top of the list. Click it to go straight back. Right-click it to move it to where you are now, remove it, or jump to it. It stays put while you keep jumping, and a new one is only saved once you have watched on from a new place for about 30 seconds. It is never exported or counted, and it is cleared when you clear the list or change video.</li>
-    <li><strong>Import</strong> <span class="pro-tag">★ Pro</span> — Load a Timestamp Links file (.json) that was shared with you, made with Export → Links as JSON. You can also drag the file onto the overlay.</li>
+    <li>Checkboxes control which entries are included when you export <em>Timestamp Links</em></li>
+    <li>Select All/None, Delete and Undo/Redo</li>
+    <li>Click a header arrow to expand or collapse a batch; click any entry to seek the video</li>
+    <li>Add a <em>Transcript</em> line manually to the list from the export context menu <span class="pro-tag">★ Pro</span></li>
+    <li><strong>Bookmark</strong> <span class="pro-tag">★ Pro</span> — When you jump to a <em>Timestamp Link</em>, the place you were watching is saved as a blue <strong>Bookmark</strong>, shown under any Chapters (or at the top of the list if there are none). Click it to go straight back, or right-click it to move it to where you are now, remove it, or jump to it. While you keep jumping around, the Bookmark stays where it is. A new one is only saved after you have watched on for about 30 seconds from a new place. Nothing is saved if you had barely started watching or the jump is within 5 seconds of where you were. It is not ticked, exported, counted or deleted with the other entries and it is cleared when you clear the list or change video</li>
+    <li><strong>Import</strong> <span class="pro-tag">★ Pro</span> — Load a <em>Timestamp Links</em> file (.json) that was shared with you, made with Export → Links as JSON. You can also drag the file onto the overlay</li>
   </ul>
 </div></div>
 
 <!-- View & playback -->
 <div class="guide-section" id="view"><div class="page">
   <span class="eyebrow">View &amp; playback</span>
-  <h2 class="section-title section-title-sm">Read, follow, and control the video</h2>
+  <h2 class="section-title section-title-sm">Read, follow and control the video</h2>
   <ul class="guide-list">
-    <li><strong>View modes</strong> — Toggle Line-by-line and Continuous text.</li>
-    <li><strong>Font size</strong> — Size slider, or Ctrl + scroll over the transcript. Ctrl+0 or the reset button restores default.</li>
-    <li><strong>Minimap</strong> <span class="pro-tag">★ Pro</span> — Vertical strip of coloured dots for every Timestamp Link match. Click a dot to jump. Show/hide with the ▾ button at the far right of the video-info row (Title / Channel / Duration). Preference is remembered.</li>
-    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to Teleprompter and export.</li>
-    <li><strong>Following</strong> — Transcript auto-scrolls to keep the current spoken line in view.</li>
-    <li><strong>Play / Pause / Stop</strong> — Control the video from the overlay.</li>
-    <li><strong>[ In ] / [ Out ]</strong> — Mark a range for focused listening or looping.</li>
-    <li><strong>Selection Copy</strong> — Click the <strong>🔗 Timestamp Links / 📝 Selection Copy</strong> button to switch from “click to seek” to free text selection, then paint over the part of the Transcript you want. When you let go, a small menu offers <strong>Copy including the times</strong>, <strong>Copy excluding the times</strong> or <strong>Cancel</strong>. Press <kbd>Enter</kbd> for your last choice or <kbd>Esc</kbd> to cancel.</li>
-    <li><strong>Selection Copy with Ctrl</strong> <span class="pro-tag">★ Pro</span> — No need to switch modes: hold <kbd>Ctrl</kbd> and paint over the text. The menu appears when you release <kbd>Ctrl</kbd>, so you can repaint until the selection is exactly right, and the overlay returns to Timestamp Links mode afterwards.</li>
+    <li><strong>View modes</strong> — Toggle Line-by-line and Continuous text</li>
+    <li><strong>Font size</strong> — Size slider, or Ctrl + scroll over the <em>Transcript</em>. Ctrl+0 or the reset button restores default</li>
+    <li><strong>Minimap</strong> <span class="pro-tag">★ Pro</span> — Vertical strip of coloured dots for every <em>Timestamp Link</em> match. Click a dot to jump. Show/hide with the ▾ button at the far right of the video-info row (Title / Channel / Duration). Preference is remembered</li>
+    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to Teleprompter and export</li>
+    <li><strong>Following</strong> — <em>Transcript</em> auto-scrolls to keep the current spoken line in view</li>
+    <li><strong>Play / Pause / Stop</strong> — Control the video from the overlay</li>
+    <li><strong>[ In ] / [ Out ]</strong> — Mark a range for focused listening or looping</li>
+    <li><strong>Selection Copy</strong> — Click the <strong>🔗 <em>Timestamp Links</em> / 📝 Selection Copy</strong> button to switch from “click to seek” to free text selection, then paint over the part of the <em>Transcript</em> you want. When you let go, a small menu offers <strong>Copy including the times</strong>, <strong>Copy excluding the times</strong> or <strong>Cancel</strong>. Press <kbd>Enter</kbd> for your last choice or <kbd>Esc</kbd> to cancel</li>
+    <li><strong>Selection Copy with Ctrl</strong> <span class="pro-tag">★ Pro</span> — No need to switch modes: hold <kbd>Ctrl</kbd> and paint over the text. The menu appears when you release <kbd>Ctrl</kbd>, so you can repaint until the selection is exactly right and the overlay returns to <em>Timestamp Links</em> mode afterwards</li>
   </ul>
 </div></div>
 
@@ -219,10 +220,10 @@
   <span class="eyebrow">Themes, opacity &amp; layout</span>
   <h2 class="section-title section-title-sm">Make it yours</h2>
   <ul class="guide-list">
-    <li><strong>Themes</strong> — Open the palette button for multiple carefully designed themes (light, dark, and specialised colourways). Default on first load is Deep Ocean. Choice is remembered.</li>
-    <li><strong>Opacity</strong> — Let the video show through the panel to any degree.</li>
-    <li><strong>Layout slots A &amp; B</strong> — Short-press to recall a saved position and size; long-press to save the current layout. If you have saved a layout in slot A, it is applied automatically each time the page loads.</li>
-    <li><strong>Minimise</strong> — Collapse to a small circular icon; click again to restore.</li>
+    <li><strong>Themes</strong> — Open the palette button for multiple carefully designed themes (light, dark and specialised colourways). Default on first load is Deep Ocean. Choice is remembered</li>
+    <li><strong>Opacity</strong> — Let the video show through the panel to any degree</li>
+    <li><strong>Layout slots A &amp; B</strong> — Short-press to recall a saved position and size; long-press to save the current layout. If you have saved a layout in slot A, it is applied automatically each time the page loads</li>
+    <li><strong>Minimise</strong> — Collapse to a small circular icon; click again to restore</li>
   </ul>
 </div></div>
 
@@ -231,11 +232,11 @@
   <span class="eyebrow">Teleprompter</span>
   <h2 class="section-title section-title-sm">Scroll in sync with the video <span class="pro-tag">★ Pro</span></h2>
   <div class="guide-body">
-    <p>Opens a dedicated floating panel that scrolls the transcript with the video — ideal for voice-overs, practice, or following along without the main overlay.</p>
+    <p>Opens a dedicated floating panel that scrolls the <em>Transcript</em> with the video — ideal for voice-overs, practice, or following along without the main overlay</p>
   </div>
   <ul class="guide-list">
-    <li>Click Teleprompter in the main panel. Hover the teleprompter to reveal gear (settings) and close.</li>
-    <li>Settings update live and are saved automatically. Use 1-column or 2-column layout; position is remembered per mode.</li>
+    <li>Click Teleprompter in the main panel. Hover the teleprompter to reveal gear (settings) and close</li>
+    <li>Settings update live and are saved automatically. Use 1-column or 2-column layout; position is remembered per mode</li>
   </ul>
   <div class="guide-img-row">
     <figure>
@@ -247,19 +248,19 @@
       <figcaption class="guide-caption">Teleprompter Settings, 1-column layout</figcaption>
     </figure>
   </div>
-  <p class="guide-caption">Choose whichever layout suits you. Both offer the same settings: view-mode profiles, lines, text, cascade, background, active-line highlight and sync offset.</p>
+  <p class="guide-caption">Choose whichever layout suits you. Both offer the same settings: profiles A / B / C, Lines, Text, Cascade, Background, Active-line highlight and Sync offset</p>
   <ul class="guide-list">
-    <li><strong>Lines Before / After</strong> — Surrounding lines around the active line.</li>
-    <li><strong>Font, colour, bold, text shadow</strong> — Full appearance control.</li>
-    <li><strong>Scale font with panel</strong> — Font grows or shrinks as you resize the panel.</li>
-    <li><strong>Cascade</strong> — Non-active lines scale down and fade with distance.</li>
-    <li><strong>Background</strong> — Optional solid background with colour and opacity.</li>
-    <li><strong>Active line highlight &amp; border</strong> — Emphasise the current line.</li>
-    <li><strong>Anchor to video</strong> — Panel follows the video player while you scroll the page (Normal/Cinema only).</li>
-    <li><strong>View-mode profiles (N / C / F)</strong> — Short-press to recall, long-press to save configurations for YouTube’s Normal, Cinema, and Fullscreen layouts.</li>
+    <li><strong>Lines Before / After</strong> — Surrounding lines around the active line</li>
+    <li><strong>Font, colour, bold, text shadow</strong> — Full appearance control</li>
+    <li><strong>Scale font with panel</strong> — Font grows or shrinks as you resize the panel</li>
+    <li><strong>Cascade</strong> — Non-active lines scale down and fade with distance</li>
+    <li><strong>Background</strong> — Optional solid background with colour and opacity</li>
+    <li><strong>Active line highlight &amp; border</strong> — Emphasise the current line</li>
+    <li><strong>Anchor to video</strong> — Panel follows the video player while you scroll the page (Normal/Cinema only)</li>
+    <li><strong>Profiles (A / B / C)</strong> — Short-press to recall, long-press to save the current settings and position. For example, you could use each profile for a different YouTube view mode (Normal, Cinema or Fullscreen)</li>
   </ul>
   <img class="guide-img" src="tp-examples.png" alt="Teleprompter visual style examples" />
-  <p class="guide-caption">Examples of different teleprompter appearances — high-contrast dark panels to bright highlighted styles.</p>
+  <p class="guide-caption">Examples of different teleprompter appearances — high-contrast dark panels to bright highlighted styles</p>
 </div></div>
 
 <!-- Export -->
@@ -267,14 +268,15 @@
   <span class="eyebrow">Export</span>
   <h2 class="section-title section-title-sm">Take your results with you</h2>
   <div class="guide-body">
-    <p>Click Export for two columns: Timestamp Links and Full Transcript. When a sync offset is active, you can choose adjusted or original timestamps.</p>
+    <p>Click Export which shows two columns: Full <em>Transcript</em> and <em>Timestamp Links</em>. When a sync offset is active, you can choose adjusted or original timestamps</p>
   </div>
   <img class="guide-img" src="export-menu.png" alt="Export menu" style="max-width:420px;" />
-  <p class="guide-caption">Export menu — Timestamp Links left, full transcript right, plus synced vs original timestamps.</p>
+  <p class="guide-caption">Export menu — Full <em>Transcript</em> choices on the left and <em>Timestamp Links</em> on the right. Also the means to choose between saving synced vs original timestamps</p>
   <ul class="guide-list">
-    <li><strong>Timestamp Links</strong> — Text (.txt) and clipboard free; JSON and Markdown Pro; add line to list Pro.</li>
-    <li><strong>Full transcript</strong> — Plain text and clipboard free; SRT, CSV, JSON, Markdown Pro.</li>
-    <li>Only checked Timestamp Links entries are included when exporting links.</li>
+    <li><strong>Full <em>Transcript</em></strong> — Plain text and clipboard free; SRT, CSV, JSON, Markdown Pro</li>
+    <li><strong><em>Timestamp Links</em></strong> — Text (.txt) and clipboard free; JSON and Markdown Pro; add line to list Pro</li>
+    <li><strong>Synced or original times</strong> — When a sync offset is active, choose whether the exported times are the adjusted (synced) ones or the original ones from YouTube</li>
+    <li>Only checked <em>Timestamp Links</em> entries are included when exporting links</li>
   </ul>
 </div></div>
 
@@ -283,9 +285,9 @@
   <span class="eyebrow">Free vs Pro</span>
   <h2 class="section-title section-title-sm">Fully usable free; Pro unlocks the advanced tools</h2>
   <div class="guide-body">
-    <p><strong>Free includes:</strong> load and search transcripts, colour-coded Timestamp Links, basic text export and clipboard, themes, opacity, layout A/B, font size, sync offset, transport controls, and Following mode.</p>
-    <p><strong>Pro unlocks:</strong> Teleprompter (full customisation and profiles), Append Search, URL lock, language picker, import chapters, manual add to Timestamp List, Bookmark, Import of shared Timestamp Links files, Selection Copy with Ctrl, SRT/CSV/JSON/Markdown export, longer history and undo depth, and minimap.</p>
-    <p>Activate Pro with the ★ Pro button — enter the email used at purchase and your licence key. Verification is local and cryptographic.</p>
+    <p><strong>Free includes:</strong> Load and searching <em>Transcripts</em>, Colour-coded <em>Timestamp Links</em>, Limited Export options, Theme choice, Following mode</p>
+    <p><strong>Pro unlocks:</strong> Teleprompter (full customisation and profiles), Append Search, URL lock, Language picker, Import chapters, Manual add to <em>Timestamp Links</em>, Bookmark, Import of shared <em>Timestamp Links</em> files, Selection Copy with Ctrl, SRT/CSV/JSON/Markdown export, Longer history and undo depth, Minimap and much more</p>
+    <p>Activate Pro with the ★ Pro button — enter the email used at purchase and your licence key. Verification is local and cryptographic</p>
   </div>
   <div style="margin-top:20px;">
     <a href="free_vs_pro.html" class="btn btn-outline">Explore Free vs Pro interactively →</a>
@@ -296,11 +298,11 @@
 <div class="guide-section" id="shortcuts"><div class="page">
   <span class="eyebrow">Keyboard shortcuts</span>
   <h2 class="section-title section-title-sm">Keep your hands on the keyboard</h2>
-  <p class="guide-body" style="margin-bottom:8px;">Open the full list any time via the ⚙ button (Shortcuts tab).</p>
+  <p class="guide-body" style="margin-bottom:8px;">Open the full list any time via the ⚙ button (Shortcuts tab)</p>
   <div class="shortcut-grid">
     <div class="shortcut-row"><span class="shortcut-label">Run search</span><span><kbd>Enter</kbd></span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Previous search state</span><span><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Next search state</span><span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Undo (back one search state)</span><span><kbd>Ctrl</kbd>+<kbd>Z</kbd></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Redo (forward one search state)</span><span><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> or <kbd>Ctrl</kbd>+<kbd>Y</kbd></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Seek to segment</span><span>Click line</span></div>
     <div class="shortcut-row"><span class="shortcut-label">Font size up/down</span><span><kbd>Ctrl</kbd> + scroll</span></div>
     <div class="shortcut-row"><span class="shortcut-label">Reset font size</span><span><kbd>Ctrl</kbd>+<kbd>0</kbd></span></div>
@@ -311,7 +313,7 @@
     <div class="shortcut-row"><span class="shortcut-label">Recall layout A or B</span><span>Short-press A / B</span></div>
     <div class="shortcut-row"><span class="shortcut-label">Language picker</span><span>Long-press Load <span class="pro-tag">Pro</span></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Toggle Append Search</span><span>Long-press Search <span class="pro-tag">Pro</span></span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Full clear (incl. transcript)</span><span>Long-press Clear</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Full clear (incl. <em>Transcript</em>)</span><span>Long-press Clear</span></div>
   </div>
 </div></div>
 
@@ -320,23 +322,23 @@
   <span class="eyebrow">Tips</span>
   <h2 class="section-title section-title-sm">Work faster</h2>
   <ul class="guide-list">
-    <li>Combine Append Search with colour batches to build a multi-topic timestamp list for one video.</li>
-    <li>Use Layout A for a compact side panel and Layout B for a larger research view.</li>
-    <li>Fix sync offset once — it applies to seeking, Following, Teleprompter, and exports.</li>
-    <li>Lock the URL for screen recording or comparing transcripts across tabs.</li>
-    <li>In Teleprompter, enable “Scale font with panel” and resize until the text feels right for your distance.</li>
-    <li>The minimap is especially useful on long videos with many scattered matches.</li>
-    <li>Export Markdown or JSON (Pro) when you want to process results in other tools.</li>
+    <li>Combine Append Search with colour batches to build a multi-topic <em>Timestamp Links</em> list for one video</li>
+    <li>Use Layout A for a compact side panel and Layout B for a larger research view</li>
+    <li>Fix sync offset once — it applies to seeking, Following, Teleprompter and exports</li>
+    <li>Lock the URL for screen recording or comparing <em>Transcripts</em> across tabs</li>
+    <li>In Teleprompter, enable “Scale font with panel” and resize until the text feels right for your distance</li>
+    <li>The minimap is especially useful on long videos with many scattered matches</li>
+    <li>Export Markdown or JSON (Pro) when you want to process results in other tools</li>
   </ul>
   <div class="tip-box">
     <div class="tip-box-label">After an update</div>
-    <p>If the extension stops responding after an update, refresh the YouTube tab. That reloads the content script with the new version.</p>
+    <p>If the extension stops responding after an update, refresh the YouTube tab. That reloads the content script with the new version</p>
   </div>
 </div></div>
 
 <div class="page" style="padding-bottom:40px;">
   <div class="cta-band cta-band-install">
-    <h2 class="cta-band-title">Start searching transcripts today</h2>
+    <h2 class="cta-band-title">Start searching <em>Transcripts</em> today</h2>
     <p class="cta-band-sub">Free to install. Works on any YouTube video with captions</p>
     <div class="install-row">
       <a href="#" class="install-btn install-chrome" title="Coming soon" onclick="return false;">🌐 <span>Add to Chrome — Free<span class="install-sub">Awaiting Chrome Web Store approval</span></span></a>
