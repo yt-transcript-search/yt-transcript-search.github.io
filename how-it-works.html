@@ -18,7 +18,7 @@
     .guide-caption { font-size: 13px; color: var(--muted); text-align: left; margin-bottom: 28px; }
     .guide-body p { margin-bottom: 14px; }
     .guide-body strong { color: var(--text); }
-    .guide-note { font-size: 14px; color: var(--muted2); margin: 4px 0 8px; } .guide-list { list-style: none; margin: 12px 0 20px; }
+    .guide-note { font-size: 13px; color: var(--muted2); margin: 4px 0 8px; } .guide-list { list-style: none; margin: 12px 0 20px; }
     .guide-list li { padding: 6px 0 6px 22px; position: relative; }
     .guide-list.numbered li { padding-left: 0; } .guide-list.numbered li::before { content: none; }
     .guide-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
@@ -28,7 +28,7 @@
       padding: 16px 18px; margin: 18px 0 24px; max-width: 640px;
     }
     .tip-box-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .tip-box p { font-size: 14px; color: var(--muted2); line-height: 1.6; margin: 0; }
+    .tip-box p { font-size: 13px; color: var(--muted2); line-height: 1.6; margin: 0; }
     .pro-tag {
       display: inline-flex; align-items: center; gap: 4px;
       padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;
@@ -82,7 +82,7 @@
 <div class="page-hero"><div class="page">
   <span class="eyebrow">How It Works</span>
   <h1 class="section-title">From install to advanced workflows</h1>
-  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — Searching, <em>Timestamp Links</em>, Teleprompter, Export, Themes and more</p>
+  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — Searching, <em>Timestamp Links</em>, <a href="teleprompter.html">Teleprompter</a>, Export, Themes and more</p>
   <div class="toc">
     <a href="#quick">Quick start</a>
     <a href="#interface">Interface</a>
@@ -140,7 +140,7 @@
     <li>1. <strong>Top bar</strong> — Logo, website &amp; YT channel links, Settings/Help (⚙), Opacity slider, Theme picker, Layout A/B slots and Minimise</li>
     <li>2. <strong>URL bar</strong> — Active YT video URL updated automatically, ‘URL Lock (Pro)’ and ‘Load <em>Transcript</em>’</li>
     <li>3. <strong>Video info row</strong> — Title, YT channel, Duration followed by ‘Import Chapters’ button (where applicable)</li>
-    <li>4. <strong><em>Transcript</em> viewer (left panel)</strong> — Search field, Search history selector, Case toggle, Search, Clear, View mode, Font size, Teleprompter (Pro), <em>Timestamp Links</em>/Selection Copy toggle, Sync offsets, Playback speed, Minimap show/hide, the loaded <em>Transcript</em>, Follow, Playback controls and In/Out Looping</li>
+    <li>4. <strong><em>Transcript</em> viewer (left panel)</strong> — Search field, Search history selector, Case toggle, Search, Clear, View mode, Font size, <a href="teleprompter.html">Teleprompter</a> (Pro), <em>Timestamp Links</em>/Selection Copy toggle, Sync offsets, Playback speed, Minimap show/hide, the loaded <em>Transcript</em>, Follow, Playback controls and In/Out Looping</li>
     <li>5. <strong><em>Timestamp Links</em> viewer (right panel)</strong> — Colour-coded search batches and manual entries, with Select All/None, Delete, Undo/Redo</li>
     <li>6. <strong>Bottom bar</strong> — Import (Pro), Export, Pro licence button and Noticeboard</li>
   </ul>
@@ -158,11 +158,13 @@
   </div>
   <ul class="guide-list">
     <li>Once loaded, title, channel and duration appear. Click any <em>Transcript</em> line to seek the video</li>
-    <li><strong>Language / caption-track picker</strong> <span class="pro-tag">★ Pro</span> — Long-press Load <em>Transcript</em> to choose among available languages and tracks (official, auto-generated, etc.)</li>
+    <li><strong><em>Transcript</em> language selector</strong> <span class="pro-tag">★ Pro</span> — Long-press Load <em>Transcript</em> to choose among available languages and tracks (official, auto-generated, etc.)</li>
+  </ul>
+  <img class="guide-img" src="lang-menu.png" alt="Language selection menu" style="max-width:280px; margin-top:14px;" />
+  <p class="guide-caption" style="margin-bottom:14px;">Language selection menu — choose the caption track that best matches the video</p>
+  <ul class="guide-list" style="margin-top:0;">
     <li><strong>URL lock</strong> <span class="pro-tag">★ Pro</span> — Long-press the lock icon. When locked, the URL and <em>Transcript</em> stay frozen even if you navigate to another video. Useful for screen capture or multi-tab comparison</li>
   </ul>
-  <img class="guide-img" src="lang-menu.png" alt="Language selection menu" style="max-width:280px;" />
-  <p class="guide-caption">Language selection menu — choose the caption track that best matches the video</p>
 </div></div>
 
 <!-- Search -->
@@ -186,7 +188,7 @@
   <span class="eyebrow"><em>Timestamp Links</em></span>
   <h2 class="section-title section-title-sm">Build a curated list of moments</h2>
   <div class="guide-body">
-    <p>Every search creates a coloured batch in the <em>Timestamp Links</em> panel (on the right by default). Manually added lines appear under a “MANUALLY CREATED” header</p>
+    <p>Every unique search creates its own colour-coded group in the <em>Timestamp Links</em> list. Manually created links appear under a “MANUALLY CREATED” group header</p>
   </div>
   <ul class="guide-list">
     <li>Checkboxes control which entries are included when you export <em>Timestamp Links</em></li>
@@ -206,7 +208,7 @@
     <li><strong>View modes</strong> — Toggle Line-by-line and Continuous text</li>
     <li><strong>Font size</strong> — Size slider, or Ctrl + scroll over the <em>Transcript</em>. Ctrl+0 or the reset button restores default</li>
     <li><strong>Minimap</strong> <span class="pro-tag">★ Pro</span> — Vertical strip of coloured dots for every <em>Timestamp Link</em> match. Click a dot to jump. Show/hide with the ▾ button at the far right of the video-info row (Title / Channel / Duration). Preference is remembered</li>
-    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to Teleprompter and export</li>
+    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to <a href="teleprompter.html">Teleprompter</a> and export</li>
     <li><strong>Following</strong> — <em>Transcript</em> auto-scrolls to keep the current spoken line in view</li>
     <li><strong>Play / Pause / Stop</strong> — Control the video from the overlay</li>
     <li><strong>[ In ] / [ Out ]</strong> — Mark a range for focused listening or looping</li>
@@ -229,38 +231,12 @@
 
 <!-- Teleprompter -->
 <div class="guide-section" id="teleprompter"><div class="page">
-  <span class="eyebrow">Teleprompter</span>
-  <h2 class="section-title section-title-sm">Scroll in sync with the video <span class="pro-tag">★ Pro</span></h2>
+  <span class="eyebrow">Teleprompter <span class="pro-tag">★ Pro</span></span>
+  <h2 class="section-title section-title-sm">Scroll in sync with the video</h2>
   <div class="guide-body">
-    <p>Opens a dedicated floating panel that scrolls the <em>Transcript</em> with the video — ideal for voice-overs, practice, or following along without the main overlay</p>
+    <p>Opens a dedicated floating panel that scrolls the <em>Transcript</em> with the video — ideal for voice-overs, practice, or following along without the main overlay. It has its own page with every setting explained</p>
   </div>
-  <ul class="guide-list">
-    <li>Click Teleprompter in the main panel. Hover the teleprompter to reveal gear (settings) and close</li>
-    <li>Settings update live and are saved automatically. Use 1-column or 2-column layout; position is remembered per mode</li>
-  </ul>
-  <div class="guide-img-row">
-    <figure>
-      <img class="guide-img" src="teleprompter-settings-2col.png" alt="Teleprompter Settings, two-column layout" />
-      <figcaption class="guide-caption">Teleprompter Settings, 2-column layout</figcaption>
-    </figure>
-    <figure>
-      <img class="guide-img" src="teleprompter-settings-1col.png" alt="Teleprompter Settings, one-column layout" />
-      <figcaption class="guide-caption">Teleprompter Settings, 1-column layout</figcaption>
-    </figure>
-  </div>
-  <p class="guide-caption">Choose whichever layout suits you. Both offer the same settings: profiles A / B / C, Lines, Text, Cascade, Background, Active-line highlight and Sync offset</p>
-  <ul class="guide-list">
-    <li><strong>Lines Before / After</strong> — Surrounding lines around the active line</li>
-    <li><strong>Font, colour, bold, text shadow</strong> — Full appearance control</li>
-    <li><strong>Scale font with panel</strong> — Font grows or shrinks as you resize the panel</li>
-    <li><strong>Cascade</strong> — Non-active lines scale down and fade with distance</li>
-    <li><strong>Background</strong> — Optional solid background with colour and opacity</li>
-    <li><strong>Active line highlight &amp; border</strong> — Emphasise the current line</li>
-    <li><strong>Anchor to video</strong> — Panel follows the video player while you scroll the page (Normal/Cinema only)</li>
-    <li><strong>Profiles (A / B / C)</strong> — Short-press to recall, long-press to save the current settings and position. For example, you could use each profile for a different YouTube view mode (Normal, Cinema or Fullscreen)</li>
-  </ul>
-  <img class="guide-img" src="tp-examples.png" alt="Teleprompter visual style examples" />
-  <p class="guide-caption">Examples of different teleprompter appearances — high-contrast dark panels to bright highlighted styles</p>
+  <p style="margin-top:18px;"><a href="teleprompter.html" class="btn btn-outline">Explore the Teleprompter →</a></p>
 </div></div>
 
 <!-- Export -->
@@ -286,7 +262,7 @@
   <h2 class="section-title section-title-sm">Fully usable free; Pro unlocks the advanced tools</h2>
   <div class="guide-body">
     <p><strong>Free includes:</strong> Load and searching <em>Transcripts</em>, Colour-coded <em>Timestamp Links</em>, Limited Export options, Theme choice, Following mode</p>
-    <p><strong>Pro unlocks:</strong> Teleprompter (full customisation and profiles), Append Search, URL lock, Language picker, Import chapters, Manual add to <em>Timestamp Links</em>, Bookmark, Import of shared <em>Timestamp Links</em> files, Selection Copy with Ctrl, SRT/CSV/JSON/Markdown export, Longer history and undo depth, Minimap and much more</p>
+    <p><strong>Pro unlocks:</strong> <a href="teleprompter.html">Teleprompter</a> (full customisation and profiles), Append Search, URL lock, Language picker, Import chapters, Manual add to <em>Timestamp Links</em>, Bookmark, Import of shared <em>Timestamp Links</em> files, Selection Copy with Ctrl, SRT/CSV/JSON/Markdown export, Longer history and undo depth, Minimap and much more</p>
     <p>Activate Pro with the ★ Pro button — enter the email used at purchase and your licence key. Verification is local and cryptographic</p>
   </div>
   <div style="margin-top:20px;">
@@ -324,9 +300,9 @@
   <ul class="guide-list">
     <li>Combine Append Search with colour batches to build a multi-topic <em>Timestamp Links</em> list for one video</li>
     <li>Use Layout A for a compact side panel and Layout B for a larger research view</li>
-    <li>Fix sync offset once — it applies to seeking, Following, Teleprompter and exports</li>
+    <li>Fix sync offset once — it applies to seeking, Following, <a href="teleprompter.html">Teleprompter</a> and exports</li>
     <li>Lock the URL for screen recording or comparing <em>Transcripts</em> across tabs</li>
-    <li>In Teleprompter, enable “Scale font with panel” and resize until the text feels right for your distance</li>
+    <li>In <a href="teleprompter.html">Teleprompter</a>, enable “Scale font with panel” and resize until the text feels right for your distance</li>
     <li>The minimap is especially useful on long videos with many scattered matches</li>
     <li>Export Markdown or JSON (Pro) when you want to process results in other tools</li>
   </ul>

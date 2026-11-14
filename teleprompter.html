@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teleprompter — YT Transcript Search</title>
+  <meta name="description" content="The YT Transcript Search Teleprompter: a floating panel that scrolls the Transcript in time with the video. Settings, profiles A / B / C, cascade, highlight and more." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon_128x128.png" />
+  <style>
+    .guide-section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+    .guide-section:last-of-type { border-bottom: none; }
+    .guide-img { border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 16px 48px rgba(0,0,0,0.45); margin: 28px 0 12px; max-width: 100%; }
+    .guide-img-row { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin: 28px 0 12px; }
+    .guide-img-row figure { margin: 0; flex: 1 1 320px; min-width: 0; }
+    .guide-img-row .guide-img { margin: 0 0 10px; width: auto; max-width: 100%; }
+    .guide-img-row .guide-caption { margin-bottom: 0; }
+    .guide-caption { font-size: 13px; color: var(--muted); text-align: left; margin-bottom: 28px; }
+    .guide-body p { margin-bottom: 14px; }
+    .guide-body strong { color: var(--text); }
+    .guide-note { font-size: 13px; color: var(--muted2); margin: 4px 0 8px; } .guide-list { list-style: none; margin: 12px 0 20px; }
+    .guide-list li { padding: 6px 0 6px 22px; position: relative; }
+    .guide-list.numbered li { padding-left: 0; } .guide-list.numbered li::before { content: none; }
+    .guide-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .guide-list li strong { color: var(--text); }
+    .tip-box {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 18px; margin: 18px 0 24px; max-width: 640px;
+    }
+    .tip-box-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .tip-box p { font-size: 13px; color: var(--muted2); line-height: 1.6; margin: 0; }
+    .pro-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700;
+      background: rgba(232,197,71,0.12); color: var(--accent); border: 1px solid rgba(232,197,71,0.25);
+      vertical-align: middle; margin-left: 6px;
+    }
+    .quick-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px; background: var(--border); border-radius: 14px; overflow: hidden; margin: 28px 0 8px;
+    }
+    .quick-step { background: var(--surface); padding: 24px 20px; }
+    .quick-step-num { font-family: var(--font-head); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 10px; display: block; }
+    .quick-step-title { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .quick-step-desc { font-size: 13px; color: var(--muted2); line-height: 1.55; }
+    .shortcut-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin-top: 20px; }
+    .shortcut-row {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .shortcut-label { font-size: 14px; color: var(--muted2); }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+    .toc a {
+      display: inline-block; padding: 6px 12px; border-radius: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      font-size: 13px; font-weight: 500; color: var(--muted2); text-decoration: none;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .toc a:hover { color: var(--accent); border-color: rgba(232,197,71,0.35); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <img src="icon_128x128.png" alt="" class="nav-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="nav-banner"/>
+  </a>
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="free_vs_pro.html">Free vs Pro</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms.html">Terms</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="purchase.html" class="nav-cta">★ Go Pro</a>
+</div></nav>
+
+<div class="page-hero"><div class="page">
+  <span class="eyebrow">Teleprompter <span class="pro-tag">★ Pro</span></span>
+  <h1 class="section-title">Karaoke for any YouTube video</h1>
+  <p class="section-sub">A floating panel that scrolls the <em>Transcript</em> over the picture in time with the speech. Read along as it is said, jump to any line with a click and make the look entirely your own</p>
+  <div class="toc">
+    <a href="#overview">At a glance</a>
+    <a href="#start">Getting started</a>
+    <a href="#settings">Settings</a>
+    <a href="#profiles">Profiles A / B / C</a>
+    <a href="#examples">Style examples</a>
+    <a href="#uses">Ideas</a>
+    <a href="#tips">Tips</a>
+  </div>
+</div></div>
+
+<!-- At a glance -->
+<div class="guide-section" id="overview"><div class="page">
+  <span class="eyebrow">At a glance</span>
+  <h2 class="section-title section-title-sm">A richer alternative to subtitles</h2>
+  <div class="guide-body">
+    <p>The Teleprompter opens in its own panel, separate from the main overlay. The line being spoken is highlighted and the lines around it scroll past, so you always know exactly where you are</p>
+  </div>
+  <img class="guide-img" src="teleprompter-illustration.png" alt="Illustration of the Teleprompter panel over a video, with numbered areas" />
+  <p class="guide-caption">An illustration of the Teleprompter panel (your own colours, fonts and layout will differ)</p>
+  <ul class="guide-list numbered">
+    <li>1. <strong>Speed and transport</strong> — Playback speed slider with − and +, plus Play, Pause and Stop. Double-click the slider to return to 1.00x. A language button switches the caption language</li>
+    <li>2. <strong>Profiles A / B / C</strong> — Short-press to recall a saved look, long-press to save the current one</li>
+    <li>3. <strong>Settings (⚙) and Close (✕)</strong> — Hover over the Teleprompter to reveal them</li>
+    <li>4. <strong>Lines before</strong> — The lines just spoken, smaller and fainter the further back they are</li>
+    <li>5. <strong>The active line</strong> — The line being spoken now, with an optional highlight and border</li>
+    <li>6. <strong>Lines after</strong> — The lines coming up, so you can read ahead</li>
+  </ul>
+</div></div>
+
+<!-- Getting started -->
+<div class="guide-section" id="start"><div class="page">
+  <span class="eyebrow">Getting started</span>
+  <h2 class="section-title section-title-sm">Open it in one click</h2>
+  <ul class="guide-list">
+    <li>Load a <em>Transcript</em>, then click <strong>Teleprompter</strong> in the main panel</li>
+    <li>Press Play and the text follows the video. Hover over the Teleprompter to reveal the gear (settings) and close buttons</li>
+    <li><strong>Click any line</strong> to jump the video to that moment (this can be switched off with the Clickable lines setting)</li>
+    <li><strong>Right-click a line</strong> to save it as a <em>Timestamp Link</em>. It is added to your list even if it never matched a search</li>
+    <li><strong>Move and resize</strong> the panel wherever suits you. Its position is remembered</li>
+    <li>If you would rather have the Teleprompter on its own, tick <strong>Close MainUI when Teleprompter opens</strong> in Settings (⚙ in the top bar)</li>
+  </ul>
+</div></div>
+
+<!-- Settings -->
+<div class="guide-section" id="settings"><div class="page">
+  <span class="eyebrow">Settings</span>
+  <h2 class="section-title section-title-sm">Make it yours</h2>
+  <div class="guide-body">
+    <p>Click the gear to open the settings. Everything updates live and is saved automatically. Use the 1-column or 2-column layout button, whichever suits your screen</p>
+  </div>
+  <div class="guide-img-row">
+    <figure>
+      <img class="guide-img" src="teleprompter-settings-2col.png" alt="Teleprompter Settings, two-column layout" />
+      <figcaption class="guide-caption">Teleprompter Settings, 2-column layout</figcaption>
+    </figure>
+    <figure>
+      <img class="guide-img" src="teleprompter-settings-1col.png" alt="Teleprompter Settings, one-column layout" />
+      <figcaption class="guide-caption">Teleprompter Settings, 1-column layout</figcaption>
+    </figure>
+  </div>
+  <ul class="guide-list">
+    <li><strong>Lines before / after</strong> — Show from 0 to 3 lines either side of the active line</li>
+    <li><strong>Font size, colour and bold</strong> — Text from 12 to 72 px in any colour</li>
+    <li><strong>Scale font with panel</strong> — The text grows or shrinks as you resize the panel</li>
+    <li><strong>Text shadow</strong> — Keeps the text readable over bright pictures, with its own colour</li>
+    <li><strong>Active line highlight and border</strong> — A background and an outline, each with its own colour</li>
+    <li><strong>Cascade</strong> — Lines other than the active one scale down and fade with distance. Set how much with two sliders</li>
+    <li><strong>Background</strong> — An optional solid panel with its own colour and opacity</li>
+    <li><strong>Clickable lines</strong> — Choose whether a click on a line jumps the video</li>
+    <li><strong>Sync offset</strong> — Coarse (seconds) and fine (milliseconds) sliders for captions that run early or late</li>
+    <li><strong>Anchor to video</strong> — The panel follows the video player while you scroll the page (Normal and Cinema view only)</li>
+  </ul>
+</div></div>
+
+<!-- Profiles -->
+<div class="guide-section" id="profiles"><div class="page">
+  <span class="eyebrow">Profiles</span>
+  <h2 class="section-title section-title-sm">Three looks, one click</h2>
+  <div class="guide-body">
+    <p>Profiles A, B and C each remember your settings and the panel's position. Short-press a profile to recall it and long-press to save the current settings into it. The same three buttons sit on the Teleprompter's own top bar, so you can switch without opening Settings</p>
+    <p>For example, you could use each profile for a different YouTube view mode (Normal, Cinema or Fullscreen). With <strong>Auto-switch</strong> ticked, the right profile is recalled automatically when the view mode changes</p>
+  </div>
+</div></div>
+
+<!-- Examples -->
+<div class="guide-section" id="examples"><div class="page">
+  <span class="eyebrow">Style examples</span>
+  <h2 class="section-title section-title-sm">From high-contrast to bright highlights</h2>
+  <img class="guide-img" src="tp-examples.png" alt="Teleprompter visual style examples" />
+  <p class="guide-caption">Examples of different Teleprompter appearances, from high-contrast dark panels to bright highlighted styles</p>
+</div></div>
+
+<!-- Ideas -->
+<div class="guide-section" id="uses"><div class="page">
+  <span class="eyebrow">Ideas</span>
+  <h2 class="section-title section-title-sm">What people use it for</h2>
+  <ul class="guide-list">
+    <li><strong>Reading along</strong> — Follow a talk as it is spoken, a richer alternative to subtitles</li>
+    <li><strong>Voice-overs and practice</strong> — Rehearse a delivery with the words scrolling in time with the video</li>
+    <li><strong>Learning a language</strong> — Read along at your own pace and switch the caption language from the Teleprompter</li>
+    <li><strong>Singing along</strong> — Karaoke for any video that has captions</li>
+    <li><strong>Watching from a distance</strong> — Make the text large and let it scroll across the picture</li>
+  </ul>
+</div></div>
+
+<!-- Tips -->
+<div class="guide-section" id="tips"><div class="page">
+  <span class="eyebrow">Tips</span>
+  <h2 class="section-title section-title-sm">Get the best from it</h2>
+  <ul class="guide-list">
+    <li>Tick <strong>Scale font with panel</strong> and resize until the text feels right for your distance</li>
+    <li>A sync offset you set once applies to seeking, Following, the Teleprompter and exports</li>
+    <li>Long-press a profile to save your look the moment it feels right</li>
+  </ul>
+  <p style="margin-top:20px;"><a href="how-it-works.html" class="btn btn-outline">← Back to How It Works</a> <a href="purchase.html" class="btn btn-primary">★ Get Pro</a></p>
+</div></div>
+
+<div class="page" style="padding-bottom:40px;">
+  <div class="cta-band cta-band-install">
+    <h2 class="cta-band-title">Start searching <em>Transcripts</em> today</h2>
+    <p class="cta-band-sub">Free to install. Works on any YouTube video with captions</p>
+    <div class="install-row">
+      <a href="#" class="install-btn install-chrome" title="Coming soon" onclick="return false;">🌐 <span>Add to Chrome — Free<span class="install-sub">Awaiting Chrome Web Store approval</span></span></a>
+      <a href="#" class="install-btn install-edge" title="Coming soon" onclick="return false;">🔷 <span>Add to Edge — Free<span class="install-sub">Coming soon to Microsoft Edge Add-ons</span></span></a>
+      <a href="purchase.html" class="install-btn install-pro">★ Go Pro</a>
+    </div>
+  </div>
+</div>
+
+<footer><div class="footer-inner">
+  <div class="footer-logo">
+    <img src="icon_128x128.png" alt="" class="footer-icon"/>
+    <img src="transcript-search-youtube-banner-1546x423-(dark-background-no-icon).png" alt="YT Transcript Search" class="footer-banner"/>
+  </div>
+    <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="free_vs_pro.html">Free vs Pro</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer-copy">© 2026 <em>YT Transcript Search</em></p>
+</div></footer>
+</body>
+</html>

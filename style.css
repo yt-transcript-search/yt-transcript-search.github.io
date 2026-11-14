@@ -26,10 +26,14 @@
   --font-body:  'Inter', sans-serif;
   --max-w:      1080px;
   --nav-h:      64px;
-  /* Page headings: change these two lines to resize every heading on the site */
-  --eyebrow-size:   22px;                       /* yellow capitals above each title */
-  --title-size:     clamp(14px, 2vw, 20px);     /* white bold page/section titles */
-  --title-sm-size:  clamp(11px, 1.5vw, 15px);   /* white bold titles inside page sections */
+  /* TYPE SCALE (two sizes down at each level). Change these lines to resize the whole site:
+     Title    = the yellow capitals            (--eyebrow-size)
+     Subtitle = the white bold line under it   (--title-size / --title-sm-size)
+     Paragraph = the grey text                 (--para-size)  */
+  --eyebrow-size:   17px;
+  --title-size:     15px;
+  --title-sm-size:  15px;
+  --para-size:      13px;
 }
 
 html { scroll-behavior: smooth; }
@@ -95,9 +99,9 @@ img { max-width: 100%; display: block; }
 
 /* ── Eyebrow ── */
 .eyebrow {
-  display: inline-block;
+  display: block; line-height: 1.2;
   font-size: var(--eyebrow-size); font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
 }
 
 /* ── Headings ── */
@@ -109,7 +113,7 @@ img { max-width: 100%; display: block; }
 }
 .section-title-sm { font-size: var(--title-sm-size); }
 .section-sub {
-  font-size: 17px; color: var(--muted2);
+  font-size: var(--para-size); color: var(--muted2);
   line-height: 1.65; margin-bottom: 32px; /* full width of .page — no max-width */
 }
 
@@ -121,7 +125,7 @@ img { max-width: 100%; display: block; }
 .hero-hook p,
 .faq-a {
   font-family: var(--font-body);
-  font-size: 17px; color: var(--muted2); line-height: 1.65;
+  font-size: var(--para-size); color: var(--muted2); line-height: 1.65;
 }
 .hero-hook p.hero-hook-close { color: var(--text); font-weight: 600; }
 
@@ -165,8 +169,8 @@ img { max-width: 100%; display: block; }
   position: absolute; top: 16px; right: 16px;
 }
 .feature-icon { font-size: 28px; margin-bottom: 14px; display: block; }
-.feature-title { font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
-.feature-desc { font-size: 14px; color: var(--muted2); line-height: 1.6; }
+.feature-title { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.feature-desc { font-size: 13px; color: var(--muted2); line-height: 1.6; }
 
 /* ── Testimonial cards ── */
 .testimonial-card {
@@ -266,6 +270,6 @@ kbd { display: inline-block; padding: 3px 8px; background: var(--surface2); bord
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .section { padding: 36px 0; }
-  .section-sub, .guide-body, .guide-body p, .guide-list li, .policy-body p, .hero-hook p, .faq-a { font-size: 15px; }
+  :root { --eyebrow-size: 18px; --title-size: 16px; --title-sm-size: 16px; --para-size: 14px; }
   .cta-band { padding: 40px 24px; }
 }

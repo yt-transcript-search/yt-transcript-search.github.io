@@ -80,8 +80,8 @@
   .fvp-panel-empty .big-icon { font-size: 30px; display:block; margin-bottom:14px; opacity:.6; }
   .fvp-panel-icon { font-size: 26px; margin-bottom:14px; }
   .fvp-panel-tier { display:inline-flex; align-self:flex-start; margin-bottom:10px; }
-  .fvp-panel-title { font-family: var(--font-head); font-size:17px; font-weight:700; color:var(--text); margin-bottom:10px; line-height:1.3; }
-  .fvp-panel-desc { font-size:14px; color:var(--muted2); line-height:1.65; }
+  .fvp-panel-title { font-family: var(--font-head); font-size:15px; font-weight:700; color:var(--text); margin-bottom:10px; line-height:1.3; }
+  .fvp-panel-desc { font-size:13px; color:var(--muted2); line-height:1.65; }
   .fvp-panel-desc strong { color: var(--text); }
 
   .fvp-legend { display:flex; gap:20px; justify-content:flex-start; margin: 8px 0 0; font-size:12px; color:var(--muted); flex-wrap:wrap; }
@@ -110,8 +110,8 @@
 <div class="fvp-hero"><div class="page">
   <span class="eyebrow">Free vs Pro</span>
   <h1 class="section-title">See the difference for yourself</h1>
-  <p class="section-sub" style="margin-bottom:0;">Toggle between Free and Pro version and hover over anything you're curious about and its details will be shown in the panel to the right of the screen.</p>
-  <p class="section-sub" style="margin-top:0;">Both versions share the same promise: no AI subscription, no account and nothing to sign in to.</p>
+  <p class="section-sub" style="margin-bottom:0;">Toggle between Free and Pro version and hover over anything you're curious about and its details will be shown in the panel to the right of the screen</p>
+  <p class="section-sub" style="margin-top:0;">Both versions share the same promise: no AI subscription, no account and nothing to sign in to</p>
 </div></div>
 
 <div class="fvp-wide">
@@ -145,7 +145,7 @@
     <div class="fvp-panel" id="fvpPanel">
       <div class="fvp-panel-empty" id="panelEmpty">
         <span class="big-icon">🖱️</span>
-        Hover (or tap) any glowing dot on the interface to see what that control does.
+        Hover (or tap) any glowing dot on the interface to see what that control does
       </div>
       <div id="panelContent" style="display:none;">
         <div class="fvp-panel-icon" id="panelIcon"></div>
@@ -216,7 +216,7 @@ const HOTSPOTS = {
       "icon": "🔒",
       "tier": "pro",
       "title": "URL Lock",
-      "desc": "Visible to everyone, but usage it is a <strong>Pro</strong> feature. Once locked, the URL and loaded <i>Transcript</i> stay put even if you browse to a different video — useful for screen recordings or staying on one video's transcript while you browse elsewhere",
+      "desc": "Visible to everyone, but usage it is a <strong>Pro</strong> feature. Once locked, the URL and loaded <i>Transcript</i> stay put even if you browse to a different video — useful for screen recordings or staying on one video's <em>Transcript</em> while you browse elsewhere",
       "box": {
         "left": "79.731%",
         "top": "9.194%",
@@ -232,8 +232,8 @@ const HOTSPOTS = {
     {
       "icon": "▶️",
       "tier": "free",
-      "title": "Load Transcript",
-      "desc": "<b>Short-press</b>&nbsp;to load the default Transcript.&nbsp;<div><b>Long-press </b>(Pro feature)&nbsp;enables you to select from every language track YouTube has for that video</div>",
+      "title": "Load <em>Transcript</em>",
+      "desc": "<b>Short-press</b>&nbsp;to load the default <em>Transcript</em>.&nbsp;<div><b>Long-press </b>(Pro feature)&nbsp;enables you to select from every language track YouTube has for that video</div>",
       "box": {
         "left": "84.930%",
         "top": "9.127%",
@@ -250,7 +250,7 @@ const HOTSPOTS = {
       "icon": "🎬",
       "tier": "free",
       "title": "Video info",
-      "desc": "Shows the title, channel, and duration of whichever video is currently loaded.",
+      "desc": "Shows the title, channel and duration of whichever video is currently loaded",
       "box": {
         "left": "0.993%",
         "top": "15.542%",
@@ -266,8 +266,8 @@ const HOTSPOTS = {
     {
       "icon": "☑️",
       "tier": "free",
-      "title": "Timestamp Links panel",
-      "desc": "Your collected list for this session, with a live count. Tick any transcript line to add it here.",
+      "title": "<em>Timestamp Links</em> panel",
+      "desc": "Your collected list for this session, with a live count. Tick any <em>Transcript</em> line to add it here",
       "box": {
         "left": "56.404%",
         "top": "19.166%",
@@ -283,8 +283,8 @@ const HOTSPOTS = {
     {
       "icon": "📋",
       "tier": "free",
-      "title": "Timestamp Links list",
-      "desc": "Right-click any line in this list to rename or remove it. Right-clicking a line in the transcript on the right also lets you <strong>manually add it here — a Pro feature</strong> — even if it never matched a search.",
+      "title": "<em>Timestamp Links</em> list",
+      "desc": "Right-click any line in this list to rename or remove it. Right-clicking a line in the <em>Transcript</em> on the left also lets you <strong>manually add it here — a Pro feature</strong> — even if it never matched a search",
       "box": {
         "left": "56.398%",
         "top": "28.696%",
@@ -351,8 +351,8 @@ const HOTSPOTS = {
     {
       "icon": "❌",
       "tier": "free",
-      "title": "Clear Search and Timestamp List",
-      "desc": "Clears the current search term and <i>Timestamp Link</i> results.<div><b>Short-press</b> to clear the current search term&nbsp;<i>Timestamp Link</i>&nbsp;results.&nbsp;</div><div><strong>Long-press </strong>(Pro feature) will also clear the loaded <i>Transcript.</i></div>",
+      "title": "Clear Search and <em>Timestamp Links</em>",
+      "desc": "Clears the current search term and <i>Timestamp Link</i> results.<div><b>Short-press</b> to clear the current search term&nbsp;<i>Timestamp Link</i>&nbsp;results.&nbsp;</div><div><strong>Long-press </strong>(Pro feature) will also clear the loaded <i>Transcript</i></div>",
       "box": {
         "left": "48.720%",
         "top": "20.328%",
@@ -369,7 +369,7 @@ const HOTSPOTS = {
       "icon": "↩️",
       "tier": "free",
       "title": "View toggle",
-      "desc": "Switch how the transcript results are displayed",
+      "desc": "Switch how the <em>Transcript</em> results are displayed",
       "box": {
         "left": "1.446%",
         "top": "26.978%",
@@ -385,7 +385,7 @@ const HOTSPOTS = {
     {
       "icon": "↩️",
       "tier": "free",
-      "title": "Transcript font reset",
+      "title": "<em>Transcript</em> font reset",
       "desc": "Resets <i>Transcript </i>font to default size",
       "box": {
         "left": "51.432%",
@@ -402,7 +402,7 @@ const HOTSPOTS = {
     {
       "icon": "📜",
       "tier": "free",
-      "title": "Transcript loaded",
+      "title": "<em>Transcript</em> loaded",
       "desc": "The full&nbsp;<i>Transcript</i>, scrollable and clickable. Click any line and the video jumps straight to that moment",
       "box": {
         "left": "0.123%",
@@ -437,10 +437,27 @@ const HOTSPOTS = {
       "icon": "⬇️",
       "tier": "free",
       "title": "Export",
-      "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON, and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the Transcript and your Timestamp Links.&nbsp;</div><div><b>Pro</b> users can also import JSON format files</div>",
+      "desc": "Export the <em>Transcript</em> or your <em>Timestamp Links</em>. TXT and clipboard copy are free. SRT, CSV, JSON and Markdown are <strong>Pro</strong> — for both the <em>Transcript</em> and your <em>Timestamp Links</em>",
       "box": {
-        "left": "2.054%",
-        "top": "93.747%",
+        "left": "1.461%",
+        "top": "93.836%",
+        "width": "7.697%",
+        "height": "4.762%"
+      },
+      "dot": {
+        "x": 0,
+        "y": -50
+      },
+      "longpress": false
+    },
+    {
+      "icon": "⬇️",
+      "tier": "free",
+      "title": "Export",
+      "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the <em>Transcript</em> and your <em>Timestamp Links</em>.&nbsp;</div><div><b>Pro</b> users can also import JSON format files</div>",
+      "box": {
+        "left": "9.869%",
+        "top": "93.872%",
         "width": "7.810%",
         "height": "4.699%"
       },
@@ -456,10 +473,10 @@ const HOTSPOTS = {
       "title": "Noticeboard",
       "desc": "Announcements from the developer — pulses gold when there's something new to read",
       "box": {
-        "left": "17.767%",
-        "top": "93.978%",
-        "width": "3.895%",
-        "height": "4.050%"
+        "left": "25.539%",
+        "top": "94.138%",
+        "width": "3.939%",
+        "height": "4.085%"
       },
       "dot": {
         "x": 0,
@@ -471,7 +488,7 @@ const HOTSPOTS = {
       "icon": "🔆",
       "tier": "free",
       "title": "Opacity",
-      "desc": "Reduce the overlay's opacity to see the video playing underneath it.",
+      "desc": "Reduce the overlay's opacity to see the video playing underneath it",
       "box": {
         "left": "82.848%",
         "top": "2.082%",
@@ -505,7 +522,7 @@ const HOTSPOTS = {
       "icon": "🗗",
       "tier": "free",
       "title": "Window controls",
-      "desc": "Minimise the overlay to a small draggable icon, or close it entirely. The transcript stays loaded either way.",
+      "desc": "Minimise the overlay to a small draggable icon, or close it entirely. The <em>Transcript</em> stays loaded either way",
       "box": {
         "left": "96.124%",
         "top": "2.070%",
@@ -522,7 +539,7 @@ const HOTSPOTS = {
       "icon": "▶️",
       "tier": "free",
       "title": "Playback controls",
-      "desc": "Play, Pause, and Stop control the video directly — no need to switch to Youtube video",
+      "desc": "Play, Pause and Stop control the video directly — no need to switch to YouTube video",
       "box": {
         "left": "21.897%",
         "top": "87.559%",
@@ -538,7 +555,7 @@ const HOTSPOTS = {
     {
       "icon": "📏",
       "tier": "free",
-      "title": "Transcript font size",
+      "title": "<em>Transcript</em> font size",
       "desc": "Adjust the font size of the&nbsp;<i>Transcript&nbsp;</i>to whatever's comfortable to read. Double-clicking will set it back to default size",
       "box": {
         "left": "38.938%",
@@ -555,7 +572,7 @@ const HOTSPOTS = {
     {
       "icon": "⭐",
       "tier": "free",
-      "title": "Website and Youtube channel",
+      "title": "Website and YouTube channel",
       "desc": "Easy way to visit&nbsp;<div><i><font color=\"#c4351c\">YT&nbsp;</font><font color=\"#c4b61c\">Transcript&nbsp;</font><font color=\"#d2d2cb\">Search</font></i>&nbsp;website or youtube channel</div>",
       "box": {
         "left": "47.793%",
@@ -590,7 +607,7 @@ const HOTSPOTS = {
       "icon": "☑️",
       "tier": "free",
       "title": "Select All/None",
-      "desc": "Easy means of selecting or deselecting all your Timestamp Links.<div><br></div>",
+      "desc": "Easy means of selecting or deselecting all your <em>Timestamp Links</em>.<div><br></div>",
       "box": {
         "left": "57.302%",
         "top": "24.329%",
@@ -606,7 +623,7 @@ const HOTSPOTS = {
     {
       "icon": "❌",
       "tier": "free",
-      "title": "Delete Timestamp Link(s)",
+      "title": "Delete <em>Timestamp Link</em>(s)",
       "desc": "Offers an easy way to mass delete entries in the&nbsp;<i>Timestamp Links&nbsp;</i>list. Tick the entries you want removed then just press the&nbsp;<i>Delete</i>&nbsp;button. Alternatively, you can right-click on an entry and select&nbsp;<i>Remove Timestamp Link</i>",
       "box": {
         "left": "79.386%",
@@ -623,8 +640,8 @@ const HOTSPOTS = {
     {
       "icon": "⏱️",
       "tier": "free",
-      "title": "Prev/Next",
-      "desc": "Like Undo and Redo, a way of removing the last Search results",
+      "title": "Undo/Redo",
+      "desc": "Steps back and forward through your searches. Undo removes the last Search results and Redo brings them back",
       "box": {
         "left": "86.251%",
         "top": "24.054%",
@@ -657,7 +674,7 @@ const HOTSPOTS = {
     {
       "icon": "🔀",
       "tier": "free",
-      "title": "Swap Transcript and Timestamp Links panels",
+      "title": "Swap <em>Transcript</em> and <em>Timestamp Links</em> panels",
       "desc": "Toggle <i>Transcript</i> panel being on the left or the right",
       "box": {
         "left": "55.252%",
@@ -677,9 +694,9 @@ const HOTSPOTS = {
       "title": "Information",
       "desc": "Numerous messages will be shown as the tool functions",
       "box": {
-        "left": "78.473%",
+        "left": "78.555%",
         "top": "94.244%",
-        "width": "20.601%",
+        "width": "20.135%",
         "height": "3.671%"
       },
       "dot": {
@@ -691,11 +708,11 @@ const HOTSPOTS = {
     {
       "icon": "⭐",
       "tier": "free",
-      "title": "Pro",
+      "title": "New hotspot",
       "desc": "Shows your licence is active. Click any time to manage or deactivate it",
       "box": {
-        "left": "10.650%",
-        "top": "93.739%",
+        "left": "18.444%",
+        "top": "93.864%",
         "width": "6.341%",
         "height": "4.711%"
       },
@@ -708,7 +725,7 @@ const HOTSPOTS = {
     {
       "icon": "↔️",
       "tier": "free",
-      "title": "Transcript / Timestamp panel divider",
+      "title": "<em>Transcript</em> / <em>Timestamp Links</em> panel divider",
       "desc": "Drag to set the width size of the <i>Transcript</i> and <i>Timestamp Links </i>panels",
       "box": {
         "left": "55.858%",
@@ -727,7 +744,7 @@ const HOTSPOTS = {
     {
       "icon": "🔗",
       "tier": "pro",
-      "title": "Youtube video URL",
+      "title": "YouTube video URL",
       "desc": "Drop in a video link, or leave it — it auto-fills from whatever video you're currently watching",
       "box": {
         "left": "0.870%",
@@ -745,7 +762,7 @@ const HOTSPOTS = {
       "icon": "🔒",
       "tier": "pro",
       "title": "URL Lock",
-      "desc": "Freezes the URL so navigating to a different video won't clear its Transcript or anything else. Useful for screen recordings, or staying on one video's Transcript while you browse elsewhere",
+      "desc": "Freezes the URL so navigating to a different video won't clear its <em>Transcript</em> or anything else. Useful for screen recordings, or staying on one video's <em>Transcript</em> while you browse elsewhere",
       "box": {
         "left": "78.582%",
         "top": "9.191%",
@@ -761,12 +778,12 @@ const HOTSPOTS = {
     {
       "icon": "▶️",
       "tier": "pro",
-      "title": "Load Transcript",
-      "desc": "<b>Short-press</b> to load the default Transcript.&nbsp;<div><b style=\"\">Long-press </b>(Pro feature)<b style=\"\">&nbsp;</b>enables you to select from every language track YouTube has for that video. The total language count is shown in brackets</div>",
+      "title": "Load <em>Transcript</em>",
+      "desc": "<b>Short-press</b> to load the default <em>Transcript</em>.&nbsp;<div><b style=\"\">Long-press </b>(Pro feature)<b style=\"\">&nbsp;</b>enables you to select from every language track YouTube has for that video. The total language count is shown in brackets</div>",
       "box": {
-        "left": "84.390%",
+        "left": "83.431%",
         "top": "9.164%",
-        "width": "14.231%",
+        "width": "15.190%",
         "height": "4.904%"
       },
       "dot": {
@@ -778,8 +795,8 @@ const HOTSPOTS = {
     {
       "icon": "🎬",
       "tier": "pro",
-      "title": "Youtube Video Details",
-      "desc": "Shows the title, channel, and duration of the currently loaded video",
+      "title": "YouTube Video Details",
+      "desc": "Shows the title, channel and duration of the currently loaded video",
       "box": {
         "left": "1.167%",
         "top": "16.307%",
@@ -795,8 +812,8 @@ const HOTSPOTS = {
     {
       "icon": "☑️",
       "tier": "pro",
-      "title": "Timestamp Links",
-      "desc": "A timestamp clickable list of all your search results. Also shows a total count of entries",
+      "title": "<em>Timestamp Links</em>",
+      "desc": "A clickable <em>Timestamp Links</em> list of all your search results. Also shows a total count of entries",
       "box": {
         "left": "60.349%",
         "top": "22.520%",
@@ -812,7 +829,7 @@ const HOTSPOTS = {
     {
       "icon": "📋",
       "tier": "pro",
-      "title": "Timestamp Links list",
+      "title": "<em>Timestamp Links</em> list",
       "desc": "Right-click any entry in this list to rename or remove it. Right-clicking an entry in the <i>Transcript panel</i>&nbsp;also lets you manually add a <i>Timestamp Link </i>to this list -&nbsp; even if it never matched a search",
       "box": {
         "left": "60.383%",
@@ -830,7 +847,7 @@ const HOTSPOTS = {
       "icon": "🔍",
       "tier": "pro",
       "title": "Search box",
-      "desc": "Type any word or phrase to search the entire Transcript instantly",
+      "desc": "Type any word or phrase to search the entire <em>Transcript</em> instantly",
       "box": {
         "left": "1.311%",
         "top": "23.093%",
@@ -864,7 +881,7 @@ const HOTSPOTS = {
       "icon": "🔎",
       "tier": "pro",
       "title": "Search (A)",
-      "desc": "In Free mode, You get to save up to 3 different searches ('<b>A</b>ppend') from a Transcript. In Pro mode, this is unlimited",
+      "desc": "In Free mode, You get to save up to 3 different searches ('<b>A</b>ppend') from a <em>Transcript</em>. In Pro mode, this is unlimited",
       "box": {
         "left": "43.528%",
         "top": "22.902%",
@@ -880,8 +897,8 @@ const HOTSPOTS = {
     {
       "icon": "❌",
       "tier": "pro",
-      "title": "Clear Search and Timestamp List",
-      "desc": "<b style=\"\">Short press </b>: Clears the current Search and <i>Timestamp Links</i> list<div><b>Long press </b>(Pro only) : In addition to the above, it also clears the loaded Transcript</div>",
+      "title": "Clear Search and <em>Timestamp Links</em>",
+      "desc": "<b style=\"\">Short press </b>: Clears the current Search and <i>Timestamp Links</i> list<div><b>Long press </b>(Pro only) : In addition to the above, it also clears the loaded <em>Transcript</em></div>",
       "box": {
         "left": "53.018%",
         "top": "22.917%",
@@ -898,7 +915,7 @@ const HOTSPOTS = {
       "icon": "↩️",
       "tier": "pro",
       "title": "View toggle",
-      "desc": "Switch how the transcript results are displayed",
+      "desc": "Switch how the <em>Transcript</em> results are displayed",
       "box": {
         "left": "1.364%",
         "top": "29.583%",
@@ -932,7 +949,7 @@ const HOTSPOTS = {
       "icon": "🧲",
       "tier": "pro",
       "title": "Syncing",
-      "desc": "In cases where Transcript files are not correctly aligned with the video playback, syncing allows you to correct this issue.<br><div>Coarse (seconds) and Fine (millisecond)s tuning allow syncing when the video audio and the transcript are not correctly aligned.</div><div><span style=\"font-size: 11px;\"><i><span style=\"font-size: 10px;\"><span style=\"font-size: 11px;\"><span style=\"font-size: 12px;\">Note : I personally find that there is a slight delay in showing the correct Transcript line in sync with the video . +280ms corrects this for 99% percent&nbsp; of the time</span></span></span></i></span></div>",
+      "desc": "In cases where <em>Transcript</em> files are not correctly aligned with the video playback, syncing allows you to correct this issue.<br><div>Coarse (seconds) and Fine (millisecond)s tuning allow syncing when the video audio and the <em>Transcript</em> are not correctly aligned.</div><div><span style=\"font-size: 11px;\"><i><span style=\"font-size: 10px;\"><span style=\"font-size: 11px;\"><span style=\"font-size: 12px;\">Note : I personally find that there is a slight delay in showing the correct Transcript line in sync with the video . +280ms corrects this for 99% percent&nbsp; of the time</span></span></span></i></span></div>",
       "box": {
         "left": "1.224%",
         "top": "39.254%",
@@ -948,7 +965,7 @@ const HOTSPOTS = {
     {
       "icon": "📏",
       "tier": "pro",
-      "title": "Transcript font size",
+      "title": "<em>Transcript</em> font size",
       "desc": "Adjust the font size of the <i>Transcript&nbsp;</i>to whatever's comfortable to read. Double-clicking will set it back to default size",
       "box": {
         "left": "43.604%",
@@ -965,7 +982,7 @@ const HOTSPOTS = {
     {
       "icon": "📜",
       "tier": "pro",
-      "title": "Transcript panel",
+      "title": "<em>Transcript</em> panel",
       "desc": "The full <i>Transcript</i>, scrollable and clickable. Click any line and the video jumps straight to that moment",
       "box": {
         "left": "0.107%",
@@ -983,7 +1000,7 @@ const HOTSPOTS = {
       "icon": "▶️",
       "tier": "pro",
       "title": "Playback controls",
-      "desc": "Play, Pause, and Stop control the video directly — no need to switch to Youtube video.",
+      "desc": "Play, Pause and Stop control the video directly — no need to switch to YouTube video",
       "box": {
         "left": "11.833%",
         "top": "87.421%",
@@ -1017,12 +1034,12 @@ const HOTSPOTS = {
       "icon": "⬇️",
       "tier": "pro",
       "title": "Export",
-      "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON, and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the Transcript and your Timestamp Links.&nbsp;</div><div><b>Pro</b>&nbsp;users can also import JSON format files</div>",
+      "desc": "Export the&nbsp;<i>Transcript</i>&nbsp;or your&nbsp;<i>Timestamp Links</i>.&nbsp;<div>TXT and clipboard copy are<b>&nbsp;Free</b>. SRT, CSV, JSON and Markdown are&nbsp;<strong>Pro</strong>&nbsp;— for both the <em>Transcript</em> and your <em>Timestamp Links</em>.&nbsp;</div><div><b>Pro</b>&nbsp;users can also import JSON format files</div>",
       "box": {
         "left": "9.519%",
-        "top": "93.594%",
+        "top": "93.719%",
         "width": "7.468%",
-        "height": "5.013%"
+        "height": "4.837%"
       },
       "dot": {
         "x": -0.36913581614083274,
@@ -1037,7 +1054,7 @@ const HOTSPOTS = {
       "desc": "Shows your licence is active. Click any time to manage or deactivate it",
       "box": {
         "left": "17.645%",
-        "top": "93.618%",
+        "top": "93.642%",
         "width": "7.401%",
         "height": "5.017%"
       },
@@ -1054,7 +1071,7 @@ const HOTSPOTS = {
       "desc": "News about <i>YT Transcript Search </i>will appear in here and let you know with a pulsating a gold border",
       "box": {
         "left": "25.915%",
-        "top": "94.001%",
+        "top": "93.977%",
         "width": "3.853%",
         "height": "4.196%"
       },
@@ -1152,7 +1169,7 @@ const HOTSPOTS = {
     {
       "icon": "↩️",
       "tier": "pro",
-      "title": "Transcript font reset",
+      "title": "<em>Transcript</em> font reset",
       "desc": "This will reset the <i>Transcript</i> font back to its default size",
       "box": {
         "left": "55.780%",
@@ -1169,7 +1186,7 @@ const HOTSPOTS = {
     {
       "icon": "⭐",
       "tier": "pro",
-      "title": "Website and Youtube channel",
+      "title": "Website and YouTube channel",
       "desc": "Easy way to visit&nbsp;<div><i><font color=\"#c4351c\">YT </font><font color=\"#c4b61c\">Transcript </font><font color=\"#d2d2cb\">Search</font></i> website or youtube channel</div>",
       "box": {
         "left": "44.818%",
@@ -1187,7 +1204,7 @@ const HOTSPOTS = {
       "icon": "☑️",
       "tier": "pro",
       "title": "Select All/None",
-      "desc": "Easy means of selecting or deselecting all your Timestamp Links",
+      "desc": "Easy means of selecting or deselecting all your <em>Timestamp Links</em>",
       "box": {
         "left": "61.342%",
         "top": "26.752%",
@@ -1220,8 +1237,8 @@ const HOTSPOTS = {
     {
       "icon": "↩️",
       "tier": "pro",
-      "title": "Prev/Next",
-      "desc": "Like Undo and Redo, a way of removing the last Search results",
+      "title": "Undo/Redo",
+      "desc": "Steps back and forward through your searches. Undo removes the last Search results and Redo brings them back",
       "box": {
         "left": "86.587%",
         "top": "26.828%",
@@ -1237,7 +1254,7 @@ const HOTSPOTS = {
     {
       "icon": "❌",
       "tier": "pro",
-      "title": "Delete Timestamp Link(s)",
+      "title": "Delete <em>Timestamp Link</em>(s)",
       "desc": "Offers an easy way to mass delete entries in the <i>Timestamp Links</i> list. Tick the entries you want removed then just press the Delete button. Alternatively, you can right-click on an entry and select Remove <i>Timestamp Link</i>",
       "box": {
         "left": "79.809%",
@@ -1255,7 +1272,7 @@ const HOTSPOTS = {
       "icon": "🗺️",
       "tier": "pro",
       "title": "Minimap",
-      "desc": "A visual map of where search results appear relative within the full transcript.<div>Can be closed/opened using the arrow above</div>",
+      "desc": "A visual map of where search results appear relative within the full <em>Transcript</em>.<div>Can be closed/opened using the arrow above</div>",
       "box": {
         "left": "56.031%",
         "top": "43.823%",
@@ -1271,7 +1288,7 @@ const HOTSPOTS = {
     {
       "icon": "#️⃣",
       "tier": "pro",
-      "title": "Timestamp Links / Selection Copy toggle",
+      "title": "<em>Timestamp Links</em> / Selection Copy toggle",
       "desc": "<i>Timestamp Links </i>: Click on any line in the <i>Transcript</i> to find that place in the video<div><i>Selection Copy</i> : Enables you to paint over and copy text from the <i>Transcript</i></div><div>Alternatively, simply hold down the Ctrl key which will put you in copy mode. On release, you will be given the choice to <i>include</i> or <i>exclude </i>the times</div>",
       "box": {
         "left": "45.590%",
@@ -1322,7 +1339,7 @@ const HOTSPOTS = {
     {
       "icon": "🔀",
       "tier": "pro",
-      "title": "Swap Transcript and Timestamp Links panels",
+      "title": "Swap <em>Transcript</em> and <em>Timestamp Links</em> panels",
       "desc": "Toggle <i>Transcript</i> panel being on the left or the right",
       "box": {
         "left": "59.285%",
@@ -1360,7 +1377,7 @@ const HOTSPOTS = {
       "desc": "Numerous messages will be shown as the tool functions",
       "box": {
         "left": "90.045%",
-        "top": "94.690%",
+        "top": "94.815%",
         "width": "8.943%",
         "height": "3.112%"
       },
@@ -1374,9 +1391,9 @@ const HOTSPOTS = {
       "icon": "📑",
       "tier": "pro",
       "title": "Import Chapters",
-      "desc": "A Pro feature, when a video has Chapters created, you will be able to import them and populate your <i>Timestamp Links</i> with its own 'Chapters' grouping",
+      "desc": "A Pro feature, when a video has Chapters created,&nbsp;<div>you will be able to import them and populate your <em>Timestamp Links</em> with its own 'Chapters' grouping</div>",
       "box": {
-        "left": "84.548%",
+        "left": "84.438%",
         "top": "15.828%",
         "width": "14.198%",
         "height": "4.935%"
@@ -1391,7 +1408,7 @@ const HOTSPOTS = {
       "icon": "⬆️",
       "tier": "pro",
       "title": "Import",
-      "desc": "JSON format files created can be Imported also. This means you will be able to share files with other <b>PRO</b> users.",
+      "desc": "JSON format files created can be Imported also. This means you will be able to share files with other <b>PRO</b> users",
       "box": {
         "left": "1.408%",
         "top": "93.683%",
@@ -1408,7 +1425,7 @@ const HOTSPOTS = {
       "icon": "✨",
       "tier": "pro",
       "title": "Show/Hide minimap",
-      "desc": "Toggle between showing or hiding the minimap below.",
+      "desc": "Toggle between showing or hiding the minimap below",
       "box": {
         "left": "56.820%",
         "top": "39.552%",
