@@ -12,6 +12,9 @@
     .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; position: relative; overflow: hidden; }
     .price-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(232,197,71,0.08) 0%, transparent 70%); pointer-events: none; }
     .price-card > * { position: relative; }
+    .price-card { grid-column: 1 / -1; }
+    .paypal-wrap { width: 100%; max-width: 760px; margin: 0 auto; }
+    .paypal-wrap > div { width: 100%; }
     .price-amount { font-family: var(--font-head); font-size: 64px; font-weight: 700; line-height: 1; color: var(--accent); margin: 16px 0 10px; }
     .price-terms { font-size: 14px; color: var(--muted2); margin-bottom: 26px; }
     .price-includes { list-style: none; margin: 0 0 30px; padding: 22px 0 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
@@ -82,7 +85,7 @@
         <li>Minimap, chapter import, longer history and undo depth</li>
       </ul>
       <!-- PayPal hosted button (YTCPNCYVN7DYA) -->
-      <div id="paypal-container-YTCPNCYVN7DYA"></div>
+      <div class="paypal-wrap"><div id="paypal-container-YTCPNCYVN7DYA"></div></div>
       <script>
         paypal.HostedButtons({
           hostedButtonId: "YTCPNCYVN7DYA",
