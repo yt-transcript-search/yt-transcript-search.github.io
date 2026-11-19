@@ -12,7 +12,8 @@
     .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; position: relative; overflow: hidden; }
     .price-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(232,197,71,0.08) 0%, transparent 70%); pointer-events: none; }
     .price-card > * { position: relative; }
-    .price-card { grid-column: 1 / -1; }
+    .price-card { grid-column: 1 / -1; background: transparent; border: 0; border-radius: 0; padding: 0; overflow: visible; }
+    .price-card::before { display: none; }
     .buy-banner { width: 100%; height: auto; display: block; border-radius: 12px; margin-bottom: 26px; }
     .buy-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; border-top: 1px solid var(--border); }
     .buy-cols .price-includes { border-top: 0; margin-bottom: 0; }
@@ -50,7 +51,7 @@
     .faq-item:first-child { border-top: 1px solid var(--border); }
     .faq-q { font-family: var(--font-head); font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
     .buy-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
-    @media (max-width: 800px) { .buy-grid { grid-template-columns: 1fr; } .price-card { padding: 32px 24px; } .buy-cols, .buy-pay { grid-template-columns: 1fr; } .paypal-wrap { margin: 0 auto; } }
+    @media (max-width: 800px) { .buy-grid { grid-template-columns: 1fr; } .price-card { padding: 0; } .buy-cols, .buy-pay { grid-template-columns: 1fr; } .paypal-wrap { margin: 0 auto; } }
   </style>
   <!-- PayPal hosted button SDK (once per page) -->
   <script src="https://www.paypal.com/sdk/js?client-id=BAAvrJxutSb6hvf8Mxs7L7otMwj1BoCgK16SxnZfSeqscis2ZXDhKrhcdQadqi-9J5Nn-MPfDe4jUvjiWk&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
@@ -150,7 +151,11 @@
                   var n = btns[i];
                   while (n && n !== box) {
                     var sib = n.previousElementSibling;
-                    while (sib) { sib.style.display = "none"; sib = sib.previousElementSibling; }
+                    while (sib) {
+                      var tg = sib.tagName;
+                      if (tg !== "STYLE" && tg !== "SCRIPT" && tg !== "LINK" && tg !== "NOSCRIPT" && !sib.querySelector("iframe")) { sib.style.display = "none"; }
+                      sib = sib.previousElementSibling;
+                    }
                     n = n.parentElement;
                   }
                 }
