@@ -56,7 +56,7 @@ In the repository, go to **Settings → Pages**, set **Source** to **Deploy from
 
 ## Contact
 
-Questions, bug reports and feature ideas: yt.transcript.search@gmail.com
+Questions, bug reports and feature ideas: bugs@yttranscriptsearch.store
 
 ## Copyright
 
