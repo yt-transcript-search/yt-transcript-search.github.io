@@ -13,7 +13,7 @@
     .price-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(232,197,71,0.08) 0%, transparent 70%); pointer-events: none; }
     .price-card > * { position: relative; }
     .price-card { grid-column: 1 / -1; }
-    .paypal-wrap { width: 100%; max-width: 760px; margin: 0 auto; }
+    .paypal-wrap { width: 100%; max-width: none; margin: 0; }
     .paypal-wrap > div { width: 100%; }
     .price-amount { font-family: var(--font-head); font-size: 64px; font-weight: 700; line-height: 1; color: var(--accent); margin: 16px 0 10px; }
     .price-terms { font-size: 14px; color: var(--muted2); margin-bottom: 26px; }
@@ -90,6 +90,29 @@
         paypal.HostedButtons({
           hostedButtonId: "YTCPNCYVN7DYA",
         }).render("#paypal-container-YTCPNCYVN7DYA")
+      </script>
+      <script>
+        /* Tidy PayPal's rendered widget: hide its price line (price is shown above) and keep the title on one line */
+        (function () {
+          var box = document.getElementById("paypal-container-YTCPNCYVN7DYA");
+          if (!box) return;
+          function tidy() {
+            var els = box.querySelectorAll("*");
+            for (var i = 0; i < els.length; i++) {
+              var el = els[i];
+              if (el.children.length) continue;
+              var t = (el.textContent || "").replace(/\s+/g, " ").trim();
+              if (/^(€\s?)?9[.,]99(\s?(€|EUR))?$/.test(t)) { el.style.display = "none"; }
+              else if (t === "YT Transcript Search") {
+                el.style.whiteSpace = "nowrap";
+                var p = el.parentElement;
+                if (p) { p.style.flex = "1 1 auto"; p.style.maxWidth = "none"; p.style.width = "auto"; }
+              }
+            }
+          }
+          new MutationObserver(tidy).observe(box, { childList: true, subtree: true });
+          tidy();
+        })();
       </script>
       <p class="price-note">Payment via PayPal. Licence key sent to the email you provide. We never see your card or PayPal login details. By purchasing you agree to our <a href="terms.html">Terms &amp; Conditions</a></p>
       <p class="price-note" style="margin-top:10px;">The amount shown on this page is in euros. When you pay, PayPal converts it to your own currency and shows the correct amount at checkout, before you confirm your payment</p>
