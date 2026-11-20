@@ -71,3 +71,19 @@ footer { border-top: 0 !important; padding-top: 0 !important; }
 /* purchase: the three steps run across the full width, side by side */
 .buy-steps { flex-direction: row !important; }
 .buy-grid > div:not(.price-card) { grid-column: 1 / -1; }
+
+/* ── The Pro emblem: use <span class="pro-tag">★ Pro</span> wherever something is a Pro feature ── */
+.pro-tag {
+  display: inline-flex !important; align-items: center; gap: 4px;
+  padding: 2px 8px !important; border-radius: 12px !important; font-size: 11px !important; font-weight: 700 !important; line-height: 1.4;
+  background: rgba(232,197,71,0.12) !important; color: var(--accent) !important; border: 1px solid rgba(232,197,71,0.25) !important;
+  vertical-align: middle; margin: 0 3px !important; white-space: nowrap; font-style: normal !important; letter-spacing: 0;
+}
+
+/* ── The Free emblem: <span class="free-tag">Free</span> (same shape as the Pro emblem, green, no star) ── */
+.free-tag {
+  display: inline-flex !important; align-items: center;
+  padding: 2px 8px !important; border-radius: 12px !important; font-size: 11px !important; font-weight: 700 !important; line-height: 1.4;
+  background: rgba(74,222,128,0.12) !important; color: #4ADE80 !important; border: 1px solid rgba(74,222,128,0.30) !important;
+  vertical-align: middle; margin: 0 3px !important; white-space: nowrap; font-style: normal !important; letter-spacing: 0;
+}
