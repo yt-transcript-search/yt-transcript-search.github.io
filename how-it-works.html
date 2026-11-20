@@ -49,6 +49,16 @@
       padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
     }
     .shortcut-label { font-size: 14px; color: var(--muted2); }
+    /* section buttons pinned under the top bar */
+    .toc-bar { position: sticky; top: var(--nav-h, 64px); z-index: 90; padding: 14px 0 12px;
+      background: var(--bg) url('ytts-background-blue-gradient.jpg') center top / cover no-repeat fixed; }
+    .toc-bar .toc { margin: 0; }
+    .page-hero { padding-top: 24px !important; }
+    .guide-section[id] { scroll-margin-top: calc(var(--nav-h, 64px) + var(--toc-h, 100px) - 22px) !important; }
+    @media (max-width: 700px) {
+      .toc-bar .toc { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
+      .toc-bar .toc a { white-space: nowrap; flex: 0 0 auto; }
+    }
     .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
     .toc a {
       display: inline-block; padding: 6px 12px; border-radius: 8px;
@@ -80,10 +90,7 @@
   <a href="purchase.html" class="nav-cta">★ Go Pro</a>
 </div></nav>
 
-<div class="page-hero"><div class="page">
-  <span class="eyebrow">How It Works</span>
-  <h1 class="section-title">From install to advanced workflows</h1>
-  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — Searching, <em>Timestamp Links</em>, <a href="teleprompter.html">Teleprompter</a>, Export, Themes and more</p>
+<div class="toc-bar"><div class="page">
   <div class="toc">
     <a href="#quick">Quick start</a>
     <a href="#interface">Interface</a>
@@ -98,6 +105,12 @@
     <a href="#shortcuts">Shortcuts</a>
     <a href="#tips">Tips</a>
   </div>
+</div></div>
+
+<div class="page-hero"><div class="page">
+  <span class="eyebrow">How It Works</span>
+  <h1 class="section-title">From install to advanced workflows</h1>
+  <p class="section-sub">A complete guide to <em>YT Transcript Search</em> — Searching. <em>Timestamp Links</em>. <a href="teleprompter.html">Teleprompter</a>. Export. Themes and more</p>
 </div></div>
 
 <!-- Quick start -->
@@ -138,12 +151,12 @@
   <img class="guide-img" src="mainUI_overview.png" alt="YT Transcript Search main interface with its main areas numbered 1 to 6: top bar, URL bar, video info row, Transcript viewer, Timestamp Links viewer and bottom bar" />
   <p class="guide-caption">The overlay in the default Deep Ocean theme, with its main areas labelled</p>
   <ul class="guide-list numbered">
-    <li>1. <strong>Top bar</strong> — Logo, website &amp; YT channel links, Settings/Help (⚙), Opacity slider, Theme picker, Layout A/B slots and Minimise</li>
-    <li>2. <strong>URL bar</strong> — Active YT video URL updated automatically, ‘URL Lock <span class="pro-tag">★ Pro</span>’ and ‘Load <em>Transcript</em>’</li>
-    <li>3. <strong>Video info row</strong> — Title, YT channel, Duration followed by ‘Import Chapters’ button (where applicable)</li>
-    <li>4. <strong><em>Transcript</em> viewer (left panel)</strong> — Search field, Search history selector, Case toggle, Search, Clear, View mode, Font size, <a href="teleprompter.html">Teleprompter</a> <span class="pro-tag">★ Pro</span>, <em>Timestamp Links</em>/Selection Copy toggle, Sync offsets, Playback speed, Minimap show/hide, the loaded <em>Transcript</em>, Follow, Playback controls and In/Out Looping</li>
-    <li>5. <strong><em>Timestamp Links</em> viewer (right panel)</strong> — Colour-coded search batches and manual entries, with Select All/None, Delete, Undo/Redo</li>
-    <li>6. <strong>Bottom bar</strong> — Import <span class="pro-tag">★ Pro</span>, Export, Pro licence button and Noticeboard</li>
+    <li>1. <strong>Top bar</strong> — Logo. Website &amp; YT channel links. Settings/Help (⚙). Opacity slider. Theme picker. Layout A/B slots <span class="pro-tag">★ Pro</span>. Minimise</li>
+    <li>2. <strong>URL bar</strong> — Active YT video URL (updated automatically). ‘URL Lock <span class="pro-tag">★ Pro</span>’. ‘Load <em>Transcript</em>’</li>
+    <li>3. <strong>Video info row</strong> — Title. YT channel. Duration. ‘Import Chapters’ <span class="pro-tag">★ Pro</span> button (where applicable)</li>
+    <li>4. <strong><em>Transcript</em> viewer (left panel)</strong> — Search field. Search history selector. Case toggle. Search. Clear. View mode. Font size. <a href="teleprompter.html">Teleprompter</a> <span class="pro-tag">★ Pro</span>. <em>Timestamp Links</em>/Selection Copy toggle. Sync offsets <span class="pro-tag">★ Pro</span>. Playback speed <span class="pro-tag">★ Pro</span>. Minimap show/hide <span class="pro-tag">★ Pro</span>. The loaded <em>Transcript</em>. Follow. Playback controls <span class="pro-tag">★ Pro</span>. In/Out Looping <span class="pro-tag">★ Pro</span></li>
+    <li>5. <strong><em>Timestamp Links</em> viewer (right panel)</strong> — Colour-coded search batches. Manual entries <span class="pro-tag">★ Pro</span>. Select All/None. Delete. Undo/Redo</li>
+    <li>6. <strong>Bottom bar</strong> — Import <span class="pro-tag">★ Pro</span>. Export. Pro licence button. Noticeboard</li>
   </ul>
   <p class="guide-note"><strong>Prefer the panels swapped?</strong> Just click the ⇄ button at the top of the divider between them. Everywhere on this website, &ldquo;left&rdquo; and &ldquo;right&rdquo; refer to the default arrangement with the <em>Transcript</em> panel on the left</p>
   <p class="guide-note">&nbsp;</p>
@@ -207,7 +220,7 @@
   <h2 class="section-title section-title-sm">Read, follow and control the video</h2>
   <ul class="guide-list">
     <li><strong>View modes</strong> — Toggle Line-by-line and Continuous text</li>
-    <li><strong>Font size</strong> — Size slider, or Ctrl + scroll over the <em>Transcript</em>. Ctrl+0 or the reset button restores default</li>
+    <li><strong>Font size</strong> — Size slider (double-click to reset), Ctrl + mousewheel while over the <em>Transcript</em> or the Reset button restores the default font size also</li>
     <li><strong>Minimap</strong> <span class="pro-tag">★ Pro</span> — Vertical strip of coloured dots for every <em>Timestamp Link</em> match. Click a dot to jump. Show/hide with the ▾ button at the far right of the video-info row (Title / Channel / Duration). Preference is remembered</li>
     <li><strong>Sync offset</strong> <span class="pro-tag">★ Pro</span> — Coarse (seconds) and fine (ms) sliders when captions lag or lead the audio. Double-click a slider to reset. The same offsets apply to <a href="teleprompter.html">Teleprompter</a> and export</li>
     <li><strong>Following</strong> — <em>Transcript</em> auto-scrolls to keep the current spoken line in view</li>
@@ -225,7 +238,7 @@
   <ul class="guide-list">
     <li><strong>Themes</strong> — Open the palette button for multiple carefully designed themes (light, dark and specialised colourways). Default on first load is Deep Ocean. Choice is remembered</li>
     <li><strong>Opacity</strong> — Let the video show through the panel to any degree</li>
-    <li><strong>Layout slots A &amp; B</strong> — Short-press to recall a saved position and size; long-press to save the current layout. If you have saved a layout in slot A, it is applied automatically each time the page loads</li>
+    <li><strong>Layout slots A &amp; B</strong> <span class="pro-tag">★ Pro</span> — Short-press to recall a saved position and size; long-press to save the current layout. If you have saved a layout in slot A, it is applied automatically each time the page loads</li>
     <li><strong>Minimise</strong> — Collapse to a small circular icon; click again to restore</li>
   </ul>
 </div></div>
@@ -245,14 +258,14 @@
   <span class="eyebrow">Export</span>
   <h2 class="section-title section-title-sm">Take your results with you</h2>
   <div class="guide-body">
-    <p>Click Export which shows two columns: Full <em>Transcript</em> and <em>Timestamp Links</em>. When a sync offset is active, you can choose adjusted or original timestamps</p>
+    <p>Click Export which shows two columns: Full <em>Transcript</em> and <em>Timestamp Links</em>. When a sync offset <span class="pro-tag">★ Pro</span> is active, you can choose adjusted or original timestamps</p>
   </div>
   <img class="guide-img" src="export-menu.png" alt="Export menu" style="max-width:420px;" />
   <p class="guide-caption">Export menu — Full <em>Transcript</em> choices on the left and <em>Timestamp Links</em> on the right. Also the means to choose between saving synced vs original timestamps</p>
   <ul class="guide-list">
     <li><strong>Full <em>Transcript</em></strong> — Plain text and clipboard <span class="free-tag">Free</span>; SRT, CSV, JSON, Markdown <span class="pro-tag">★ Pro</span></li>
     <li><strong><em>Timestamp Links</em></strong> — Text (.txt) and clipboard <span class="free-tag">Free</span>; JSON and Markdown <span class="pro-tag">★ Pro</span>; add line to list <span class="pro-tag">★ Pro</span></li>
-    <li><strong>Synced or original times</strong> — When a sync offset is active, choose whether the exported times are the adjusted (synced) ones or the original ones from YouTube</li>
+    <li><strong>Synced or original times</strong> <span class="pro-tag">★ Pro</span> — When a sync offset is active, choose whether the exported times are the adjusted (synced) ones or the original ones from YouTube</li>
     <li>Only checked <em>Timestamp Links</em> entries are included when exporting links</li>
   </ul>
 </div></div>
@@ -262,8 +275,8 @@
   <span class="eyebrow">Free vs Pro</span>
   <h2 class="section-title section-title-sm">Fully usable free; Pro unlocks the advanced tools</h2>
   <div class="guide-body">
-    <p><span class="free-tag">Free</span> <strong>includes:</strong> Load and searching <em>Transcripts</em>, Colour-coded <em>Timestamp Links</em>, Limited Export options, Theme choice, Following mode</p>
-    <p><span class="pro-tag">★ Pro</span> <strong>unlocks:</strong> <a href="teleprompter.html">Teleprompter</a> (full customisation and profiles), Append Search, URL lock, Language picker, Import chapters, Manual add to <em>Timestamp Links</em>, Bookmark, Import of shared <em>Timestamp Links</em> files, Selection Copy with Ctrl, SRT/CSV/JSON/Markdown export, Longer history and undo depth, Minimap and much more</p>
+    <p><span class="free-tag">Free</span> <strong>includes:</strong> Load and searching <em>Transcripts</em>. Colour-coded <em>Timestamp Links</em>. Limited Export options. Theme choice. Following mode</p>
+    <p><span class="pro-tag">★ Pro</span> <strong>unlocks:</strong> <a href="teleprompter.html">Teleprompter</a> (full customisation and profiles). Append Search. URL lock. Language picker. Import chapters. Manual add to <em>Timestamp Links</em>. Bookmark. Import of shared <em>Timestamp Links</em> files. Selection Copy with Ctrl. SRT/CSV/JSON/Markdown export. Longer history and undo depth. Minimap and much more</p>
     <p>Activate Pro with the <span class="pro-tag">★ Pro</span> button — enter the email used at purchase and your licence key. Verification is local and cryptographic</p>
   </div>
   <div style="margin-top:20px;">
@@ -285,12 +298,12 @@
     <div class="shortcut-row"><span class="shortcut-label">Reset font size</span><span><kbd>Ctrl</kbd>+<kbd>0</kbd></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Selection Copy without switching modes</span><span>Hold <kbd>Ctrl</kbd> and paint <span class="pro-tag">★ Pro</span></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Copy menu: confirm / cancel</span><span><kbd>Enter</kbd> / <kbd>Esc</kbd></span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Reset sync offset</span><span>Double-click slider</span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Save layout A or B</span><span>Long-press A / B</span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Recall layout A or B</span><span>Short-press A / B</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Reset sync offset</span><span>Double-click slider <span class="pro-tag">★ Pro</span></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Save layout A or B</span><span>Long-press A / B <span class="pro-tag">★ Pro</span></span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Recall layout A or B</span><span>Short-press A / B <span class="pro-tag">★ Pro</span></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Language picker</span><span>Long-press Load <span class="pro-tag">★ Pro</span></span></div>
     <div class="shortcut-row"><span class="shortcut-label">Toggle Append Search</span><span>Long-press Search <span class="pro-tag">★ Pro</span></span></div>
-    <div class="shortcut-row"><span class="shortcut-label">Full clear (incl. <em>Transcript</em>)</span><span>Long-press Clear</span></div>
+    <div class="shortcut-row"><span class="shortcut-label">Full clear (incl. <em>Transcript</em>)</span><span>Long-press Clear <span class="pro-tag">★ Pro</span></span></div>
   </div>
 </div></div>
 
@@ -299,9 +312,9 @@
   <span class="eyebrow">Tips</span>
   <h2 class="section-title section-title-sm">Work faster</h2>
   <ul class="guide-list">
-    <li>Combine Append Search with colour batches to build a multi-topic <em>Timestamp Links</em> list for one video</li>
-    <li>Use Layout A for a compact side panel and Layout B for a larger research view</li>
-    <li>Fix sync offset once — it applies to seeking, Following, <a href="teleprompter.html">Teleprompter</a> and exports</li>
+    <li>Combine Append Search <span class="pro-tag">★ Pro</span> with colour batches to build a multi-topic <em>Timestamp Links</em> list for one video</li>
+    <li>Use Layout A and Layout B <span class="pro-tag">★ Pro</span> for a compact side panel and a larger research view</li>
+    <li>Fix sync offset <span class="pro-tag">★ Pro</span> once — it applies to seeking, Following, <a href="teleprompter.html">Teleprompter</a> and exports</li>
     <li>Lock the URL for screen recording or comparing <em>Transcripts</em> across tabs</li>
     <li>In <a href="teleprompter.html">Teleprompter</a>, enable “Scale font with panel” and resize until the text feels right for your distance</li>
     <li>The minimap is especially useful on long videos with many scattered matches</li>
@@ -342,6 +355,15 @@
   </nav>
   <p class="footer-copy">© 2026 <em>YT Transcript Search</em></p>
 </div></footer>
+<script>
+  (function () {
+    var bar = document.querySelector('.toc-bar');
+    if (!bar) return;
+    function set() { document.documentElement.style.setProperty('--toc-h', bar.offsetHeight + 'px'); }
+    set(); window.addEventListener('resize', set); window.addEventListener('load', set);
+    if (window.ResizeObserver) new ResizeObserver(set).observe(bar);
+  })();
+</script>
 <script src="nav.js" defer></script>
 </body>
 </html>
