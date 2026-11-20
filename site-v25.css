@@ -1,0 +1,73 @@
+/* YT Transcript Search website v25.0 - shared tidy-up, loaded after style.css and each page's own styles.
+   One place for: no divider lines, one standard 'joined panels' look, one standard button look. */
+
+/* ── No divider lines; the space that went with each line is closed up ── */
+.page-hero, .fvp-hero { border-bottom: 0 !important; padding-bottom: 0 !important; }
+.features-section, .guide-section { border-top: 0 !important; border-bottom: 0 !important; padding-bottom: 0 !important; }
+.section + .section { border-top: 0 !important; padding-top: 0 !important; }
+.features-section + .features-section, .guide-section + .guide-section { padding-top: 36px; }
+.testi-section-label { border-bottom: 0 !important; padding-bottom: 0 !important; margin-bottom: 16px !important; }
+.faq-item, .faq-item:first-child { border-top: 0 !important; border-bottom: 0 !important; padding: 12px 0 !important; }
+.links-band { border-top: 0 !important; padding-top: 0 !important; }
+.buy-cols { border-top: 0 !important; }
+.buy-cols .price-includes { padding-top: 0 !important; }
+.buy-desc { border-bottom: 0 !important; padding-bottom: 12px !important; }
+
+/* footer line only as wide as the page content (logo to last link), not the full window */
+footer { border-top: 0 !important; padding-top: 0 !important; }
+.footer-inner { position: relative; padding-top: 40px !important; }
+.footer-inner::before { content: ''; position: absolute; top: 0; left: 24px; right: 24px; height: 1px; background: var(--border); }
+
+/* ── Standard buttons: dark fill, faint outline (same as the How It Works guide buttons) ── */
+.btn-outline { background: var(--surface) !important; }
+.btn-outline:hover { background: var(--surface) !important; }
+.jump { gap: 8px !important; }
+.jump a.btn, .jump a.btn-outline {
+  padding: 6px 12px !important; border-radius: 8px !important; font-size: 13px !important; font-weight: 500 !important;
+  color: var(--muted2) !important; background: var(--surface) !important; border: 1px solid var(--border) !important;
+  transition: color 0.15s, border-color 0.15s;
+}
+.jump a.btn:hover, .jump a.btn-outline:hover { color: var(--accent) !important; border-color: rgba(232,197,71,0.35) !important; text-decoration: none; }
+
+/* ── Standard panels: joined, no outline, same type sizes, no hover effect (the How It Works 'Quick start' look) ── */
+.quick-steps, .steps, .testi-grid, .summary-grid, .contact-cards, .feature-grid, .use-cases, .welcome-steps, .buy-steps {
+  display: flex !important; flex-wrap: wrap !important; gap: 2px !important;
+  background: var(--border) !important; border-radius: 14px !important; overflow: hidden !important; padding: 0 !important;
+}
+.quick-step, .step, .testimonial-card, .summary-card, .contact-card, .feature-card, .use-case, .welcome-step, .buy-step {
+  flex: 1 1 220px; min-width: 0; box-sizing: border-box;
+  background: var(--surface) !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+  padding: 24px 20px !important; transform: none !important; transition: none !important;
+}
+.quick-step:hover, .step:hover, .testimonial-card:hover, .summary-card:hover, .contact-card:hover, .feature-card:hover, .use-case:hover, .welcome-step:hover, .buy-step:hover {
+  background: var(--surface) !important; border: 0 !important; box-shadow: none !important; transform: none !important;
+}
+.testimonial-card, .testimonial-card.featured { flex-basis: 300px; background: var(--surface) !important; }
+.contact-card { flex-basis: calc(50% - 2px); }
+.feature-card { flex-basis: 260px; }
+.use-case { flex-basis: 280px; }
+.summary-card { flex-basis: 220px; }
+.buy-step { flex-direction: column; gap: 0; }
+
+/* panel text: numbers 12px, titles 15px, text 13px */
+.welcome-num, .step-num, .quick-step-num, .buy-step-num { font-size: 12px !important; letter-spacing: 0.1em; }
+.buy-step-num { background: none !important; border: 0 !important; border-radius: 0 !important; width: auto !important; height: auto !important; justify-content: flex-start !important; margin-bottom: 10px; }
+.buy-step-num::before { content: '0'; }
+.welcome-title, .step-title, .buy-step-title, .summary-title, .contact-card-title, .feature-title, .use-case-title, .quick-step-title { font-size: 15px !important; margin-bottom: 6px !important; }
+.welcome-desc, .step-desc, .buy-step-desc, .summary-desc, .contact-card-desc, .feature-desc, .use-case-desc, .quick-step-desc { font-size: 13px !important; line-height: 1.55 !important; }
+.testimonial-quote, .testimonial-card.featured .testimonial-quote { font-size: 13px !important; line-height: 1.6 !important; }
+.testimonial-card { gap: 14px !important; }
+.testimonial-name { font-size: 13px !important; }
+.testimonial-avatar { width: 32px !important; height: 32px !important; font-size: 14px !important; }
+.contact-card-link { font-size: 13px !important; }
+.contact-card-icon, .feature-icon { font-size: 22px !important; }
+
+/* contact notes: same joined, outline-free look */
+.response-note { border: 0 !important; background: var(--surface) !important; border-radius: 14px !important; margin-top: 2px !important; }
+.response-note:first-of-type, .contact-cards + .response-note { margin-top: 20px !important; }
+.response-note:has(+ .response-note) { border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+.response-note + .response-note { border-top-left-radius: 0 !important; border-top-right-radius: 0 !important; }
+
+/* purchase: the three steps run across the full width, side by side */
+.buy-steps { flex-direction: row !important; }
+.buy-grid > div:not(.price-card) { grid-column: 1 / -1; }
