@@ -1488,7 +1488,7 @@ function showInfo(h, el) {
   panelEmpty.style.display = 'none';
   panelContent.style.display = 'block';
   panelIcon.textContent = h.icon;
-  panelTitle.textContent = h.title;
+  panelTitle.innerHTML = h.title;
   panelDesc.innerHTML = h.desc;
   panelTier.textContent = h.tier === 'pro' ? '★ Pro' : 'Free + Pro';
   panelTier.className = 'badge fvp-panel-tier ' + (h.tier === 'pro' ? 'pro' : 'free');
