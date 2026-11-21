@@ -49,16 +49,6 @@
       padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
     }
     .shortcut-label { font-size: 14px; color: var(--muted2); }
-    /* section buttons pinned under the top bar */
-    .toc-bar { position: sticky; top: var(--nav-h, 64px); z-index: 90; padding: 14px 0 12px;
-      background: var(--bg) url('ytts-background-blue-gradient.jpg') center top / cover no-repeat fixed; }
-    .toc-bar .toc { margin: 0; }
-    .page-hero { padding-top: 24px !important; }
-    .guide-section[id] { scroll-margin-top: calc(var(--nav-h, 64px) + var(--toc-h, 100px) - 22px) !important; }
-    @media (max-width: 700px) {
-      .toc-bar .toc { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
-      .toc-bar .toc a { white-space: nowrap; flex: 0 0 auto; }
-    }
     .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
     .toc a {
       display: inline-block; padding: 6px 12px; border-radius: 8px;
@@ -353,17 +343,8 @@
     <a href="terms.html">Terms &amp; Conditions</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <p class="footer-copy">© 2026 <em>YT Transcript Search</em></p>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 <em>YT Transcript Search</em></p><span class="footer-version">v1.25.15</span></div>
 </div></footer>
-<script>
-  (function () {
-    var bar = document.querySelector('.toc-bar');
-    if (!bar) return;
-    function set() { document.documentElement.style.setProperty('--toc-h', bar.offsetHeight + 'px'); }
-    set(); window.addEventListener('resize', set); window.addEventListener('load', set);
-    if (window.ResizeObserver) new ResizeObserver(set).observe(bar);
-  })();
-</script>
 <script src="nav.js" defer></script>
 </body>
 </html>

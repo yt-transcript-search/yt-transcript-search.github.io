@@ -53,4 +53,27 @@
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+
+  /* Pinned section buttons: fixed under the top bar, with a spacer so the page starts below them */
+  function initToc() {
+    var bar = document.querySelector('.toc-bar');
+    if (!bar) return;
+    var nav = document.querySelector('.nav');
+    var root = document.documentElement;
+    var spacer = document.createElement('div');
+    spacer.className = 'toc-spacer';
+    bar.parentNode.insertBefore(spacer, bar.nextSibling);
+    function set() {
+      root.style.setProperty('--nav-h', (nav ? nav.offsetHeight : 64) + 'px');
+      bar.classList.add('toc-fixed');
+      var h = bar.offsetHeight;
+      root.style.setProperty('--toc-h', h + 'px');
+      spacer.style.height = h + 'px';
+    }
+    set();
+    window.addEventListener('resize', set);
+    window.addEventListener('load', set);
+    if (window.ResizeObserver) new ResizeObserver(set).observe(bar);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initToc); else initToc();
 })();
