@@ -185,7 +185,7 @@
     <a href="faq.html">FAQ</a>
     <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="contact.html">Contact</a>
   </nav>
-  <div class="footer-bottom"><p class="footer-copy">© 2026 <em>YT Transcript Search</em></p><span class="footer-version">v1.25.15</span></div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 <em>YT Transcript Search</em></p><span class="footer-version"></span></div>
 </div></footer>
 
 <script>
@@ -932,23 +932,6 @@ const HOTSPOTS = {
       "longpress": false
     },
     {
-      "icon": "🗺️",
-      "tier": "pro",
-      "title": "Minimap show/hide",
-      "desc": "Show or hide the minimap",
-      "box": {
-        "left": "61.968%",
-        "top": "37.623%",
-        "width": "2.628%",
-        "height": "3.303%"
-      },
-      "dot": {
-        "x": 0,
-        "y": -50
-      },
-      "longpress": false
-    },
-    {
       "icon": "▶️",
       "tier": "pro",
       "title": "Playback speed",
@@ -1092,6 +1075,8 @@ toggle.addEventListener('click', (e) => {
 });
 
 renderHotspots();
+// ?tier=pro opens the page on the Pro only view
+if (/[?&]tier=pro(&|$)/.test(location.search)) { var proBtn = toggle.querySelector('button[data-tier="pro"]'); if (proBtn) proBtn.click(); }
 </script>
 <script src="nav.js" defer></script>
 </body></html>

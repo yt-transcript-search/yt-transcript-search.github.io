@@ -2,6 +2,9 @@
    Adds a "Menu" button to the top bar on narrow screens (and at high browser zoom / display scaling),
    where style.css hides the row of links. The links themselves stay in each page as plain HTML.
    Nothing here touches the Chrome extension. */
+/* Website version shown in every page footer. Change it here and upload nav.js only */
+var YTTS_SITE_VERSION = 'v1.26.6';
+
 (function () {
   'use strict';
   var BREAKPOINT = 960;
@@ -53,6 +56,12 @@
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+
+  /* Footer version */
+  (function () {
+    var els = document.querySelectorAll('.footer-version');
+    for (var i = 0; i < els.length; i++) els[i].textContent = YTTS_SITE_VERSION;
+  })();
 
   /* Pinned section buttons: fixed under the top bar, with a spacer so the page starts below them */
   function initToc() {
