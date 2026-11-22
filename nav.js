@@ -3,7 +3,7 @@
    where style.css hides the row of links. The links themselves stay in each page as plain HTML.
    Nothing here touches the Chrome extension. */
 /* Website version shown in every page footer. Change it here and upload nav.js only */
-var YTTS_SITE_VERSION = 'v1.27.0';
+var YTTS_SITE_VERSION = 'v1.29.1';
 
 (function () {
   'use strict';
