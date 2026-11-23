@@ -9,7 +9,8 @@
 <link rel="icon" href="icon_128x128.png" />
 <style>
   .fvp-hero { padding: 48px 0 32px; border-bottom: 1px solid var(--border); }
-  .fvp-wide { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+  .fvp-hero .page, .fvp-wide { max-width: 1560px; width: 94vw; margin: 0 auto; padding-left: 0; padding-right: 0; }
+  @media (max-width: 980px) { .fvp-hero .page, .fvp-wide { width: 96vw; } }
 
   /* ── Toggle ── */
   .tier-toggle-wrap { display:flex; justify-content:center; margin: 36px 0 22px; }
@@ -38,8 +39,8 @@
   @media (hover:none) { .tier-hint .hover-hint{display:none;} .tier-hint .tap-hint{display:inline;} }
 
   /* ── Main layout ── */
-  .fvp-stage { display:grid; grid-template-columns: minmax(0,1fr) 280px; gap: 24px; align-items:start; padding-bottom: 40px; width: 100%; }
-  @media (max-width: 980px) { .fvp-stage { grid-template-columns: 1fr; } }
+  .fvp-stage { display:grid; grid-template-columns: minmax(0,1fr) 280px; gap: 24px; align-items:start; padding-bottom: 40px; max-width: 1560px; margin: 0 auto; position: relative; left: 50%; transform: translateX(-50%); width: 94vw; }
+  @media (max-width: 980px) { .fvp-stage { grid-template-columns: 1fr; width: 96vw; } }
 
   .fvp-main { min-width: 0; }
   .fvp-image-wrap {
@@ -79,8 +80,8 @@
   .fvp-panel-empty .big-icon { font-size: 30px; display:block; margin-bottom:14px; opacity:.6; }
   .fvp-panel-icon { font-size: 26px; margin-bottom:14px; }
   .fvp-panel-tier { display:inline-flex; align-self:flex-start; margin-bottom:10px; }
-  .fvp-panel-title { font-family: var(--font-head); font-size:15px; font-weight:700; color:var(--text); margin-bottom:10px; line-height:1.3; }
-  .fvp-panel-desc { font-size:13px; color:var(--muted2); line-height:1.65; }
+  .fvp-panel-title { font-family: var(--font-head); font-size:17px; font-weight:700; color:var(--text); margin-bottom:10px; line-height:1.3; }
+  .fvp-panel-desc { font-size:14px; color:var(--muted2); line-height:1.65; }
   .fvp-panel-desc strong { color: var(--text); }
 
   .fvp-legend { display:flex; gap:20px; justify-content:flex-start; margin: 8px 0 0; font-size:12px; color:var(--muted); flex-wrap:wrap; }
@@ -88,7 +89,6 @@
   .fvp-legend .dot { width:8px; height:8px; border-radius:50%; background:#4ade80; display:inline-block; }
   .fvp-legend .dot.pro { background:#e8c547; }
 </style>
-<link rel="stylesheet" href="site-v25.css" />
 </head>
 <body>
 
@@ -107,7 +107,15 @@
   <a href="purchase.html" class="nav-cta">★ Go Pro</a>
 </div></nav>
 
-<div class="toc-bar"><div class="page">
+<div class="fvp-hero"><div class="page">
+  <span class="eyebrow">Free vs Pro</span>
+  <h1 class="section-title">See the difference for yourself</h1>
+  <p class="section-sub" style="margin-bottom:0;">Toggle between Free and Pro version and hover over anything you're curious about and its details will be shown in the panel to the right of the screen.</p>
+  <p class="section-sub" style="margin-top:0;">Both versions share the same promise: no AI subscription, no account and nothing to sign in to.</p>
+</div></div>
+
+<div class="fvp-wide">
+
   <div class="tier-toggle-wrap">
     <div class="tier-toggle" id="tierToggle">
       <div class="pill"></div>
@@ -115,16 +123,6 @@
       <button type="button" data-tier="pro">Pro only</button>
     </div>
   </div>
-</div></div>
-
-<div class="fvp-hero"><div class="page">
-  <span class="eyebrow">Free vs Pro</span>
-  <h1 class="section-title">See the difference for yourself</h1>
-  <p class="section-sub" style="margin-bottom:0;">Toggle between the Free and Pro versions then hover over anything you're curious about, its details will be shown in the panel to the right of the screen</p>
-</div></div>
-
-<div class="fvp-wide">
-
   <p class="tier-hint">
     <span class="hover-hint">Hover any glowing dot on the interface to learn what it does</span>
     <span class="tap-hint">Tap any glowing dot on the interface to learn what it does</span>
@@ -147,7 +145,7 @@
     <div class="fvp-panel" id="fvpPanel">
       <div class="fvp-panel-empty" id="panelEmpty">
         <span class="big-icon">🖱️</span>
-        Hover (or tap) any glowing dot on the interface to see what that control does
+        Hover (or tap) any glowing dot on the interface to see what that control does.
       </div>
       <div id="panelContent" style="display:none;">
         <div class="fvp-panel-icon" id="panelIcon"></div>
@@ -163,9 +161,9 @@
 <div class="page" style="padding-bottom:40px;">
   <div class="cta-band cta-band-install">
     <h2 class="cta-band-title">Ready to try it?</h2>
-    <p class="cta-band-sub"><span class="free-tag">Free</span> to install. Upgrade to Pro any time, right inside the extension</p>
+    <p class="cta-band-sub">Free to install. Upgrade to Pro any time, right inside the extension</p>
     <div class="install-row">
-      <a href="https://chromewebstore.google.com/detail/yt-transcript-search/glinfkmlkgldmmpkocdjgnhamhpidpdc" class="install-btn install-chrome" target="_blank" rel="noopener" title="Add YT Transcript Search to Chrome">🌐 <span>Add to Chrome — Free<span class="install-sub">From the Chrome Web Store</span></span></a>
+      <a href="#" class="install-btn install-chrome" title="Coming soon" onclick="return false;">🌐 <span>Add to Chrome — Free<span class="install-sub">Awaiting Chrome Web Store approval</span></span></a>
       <a href="#" class="install-btn install-edge" title="Coming soon" onclick="return false;">🔷 <span>Add to Edge — Free<span class="install-sub">Coming soon to Microsoft Edge Add-ons</span></span></a>
       <a href="purchase.html" class="install-btn install-pro">★ Go Pro</a>
     </div>
@@ -184,7 +182,7 @@
     <a href="faq.html">FAQ</a>
     <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="contact.html">Contact</a>
   </nav>
-  <div class="footer-bottom"><p class="footer-copy">© 2026 <em>YT Transcript Search</em></p><span class="footer-version"></span></div>
+  <p class="footer-copy">© 2026 <em>YT Transcript Search</em></p>
 </div></footer>
 
 <script>
@@ -456,7 +454,7 @@ const HOTSPOTS = {
       "icon": "⭐",
       "tier": "free",
       "title": "Go Pro!",
-      "desc": "<div>Simply enter in the details you would have been emailed after payment.</div><div>To go ★ Pro,&nbsp; click the link to the webstie's purchase page, this can be found within at the top</div>",
+      "desc": "<div>Simply enter in the details you would have been emailed after payment.</div><div>To go ★ Pro,&nbsp; click the link to the website's purchase page, this can be found within at the top</div>",
       "box": {
         "left": "10.682%",
         "top": "93.672%",
@@ -1049,7 +1047,7 @@ function showInfo(h, el) {
   panelEmpty.style.display = 'none';
   panelContent.style.display = 'block';
   panelIcon.textContent = h.icon;
-  panelTitle.innerHTML = h.title;
+  panelTitle.textContent = h.title;
   panelDesc.innerHTML = h.desc;
   panelTier.textContent = h.tier === 'pro' ? '★ Pro' : 'Free + Pro';
   panelTier.className = 'badge fvp-panel-tier ' + (h.tier === 'pro' ? 'pro' : 'free');
@@ -1074,8 +1072,5 @@ toggle.addEventListener('click', (e) => {
 });
 
 renderHotspots();
-// ?tier=pro opens the page on the Pro only view
-if (/[?&]tier=pro(&|$)/.test(location.search)) { var proBtn = toggle.querySelector('button[data-tier="pro"]'); if (proBtn) proBtn.click(); }
 </script>
-<script src="nav.js" defer></script>
 </body></html>
