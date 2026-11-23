@@ -3,7 +3,7 @@
    where style.css hides the row of links. The links themselves stay in each page as plain HTML.
    Nothing here touches the Chrome extension. */
 /* Website version shown in every page footer. Change it here and upload nav.js only */
-var YTTS_SITE_VERSION = 'v1.29.1';
+var YTTS_SITE_VERSION = 'v1.29.3';
 
 (function () {
   'use strict';
@@ -19,6 +19,12 @@ var YTTS_SITE_VERSION = 'v1.29.1';
     '  .nav.menu-open .nav-links li{list-style:none;width:100%}',
     '  .nav.menu-open .nav-links a{padding:12px 10px;font-size:15px;white-space:normal}',
     '}',
+    '.nav-inner{position:relative}',
+    '.nav-back{position:absolute;left:-12px;top:50%;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;width:26px;height:32px;padding:0;border:0;background:transparent;color:var(--accent,#e8c547);cursor:pointer;border-radius:6px;transition:color .15s}',
+    '.nav-back svg{width:18px;height:18px;display:block}',
+    '.nav-back:hover{color:var(--text,#f0f0f2)}',
+    '.nav-back:focus-visible{outline:2px solid var(--accent,#e8c547);outline-offset:2px}',
+    '@media (max-width:1110px){ .nav-back{left:2px;width:20px} }',
     '@media (max-width:440px){ .nav-logo .nav-banner{display:none} }'
   ].join('\n');
 
@@ -28,6 +34,20 @@ var YTTS_SITE_VERSION = 'v1.29.1';
     var inner = nav.querySelector('.nav-inner');
     var links = nav.querySelector('.nav-links');
     var cta = nav.querySelector('.nav-cta');
+    /* Back arrow, left of the logo: returns to the previous page (goes to the Home page when the page was opened directly) */
+    var logo = nav.querySelector('.nav-logo');
+    if (inner && logo) {
+      var back = document.createElement('button');
+      back.type = 'button';
+      back.className = 'nav-back';
+      back.setAttribute('aria-label', 'Back to the previous page');
+      back.title = 'Back';
+      back.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+      back.addEventListener('click', function () {
+        if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }
+      });
+      inner.appendChild(back);
+    }
     if (!inner || !links || nav.querySelector('.nav-menu-btn')) return;
 
     var style = document.createElement('style');
