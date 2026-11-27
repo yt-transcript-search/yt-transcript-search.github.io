@@ -15,6 +15,11 @@
     .guide-img-row figure { margin: 0; flex: 1 1 320px; min-width: 0; }
     .guide-img-row .guide-img { margin: 0 0 10px; width: auto; max-width: 100%; }
     .guide-img-row .guide-caption { margin-bottom: 0; }
+    .tp-set-split { display: grid; grid-template-columns: minmax(0, 1fr) 307px; gap: 32px; align-items: start; margin-top: 8px; }
+    .tp-set-split figure { margin: 0; }
+    .tp-set-split .guide-img { width: 100%; height: auto; display: block; margin: 0 0 10px; }
+    .tp-set-split .tp-set-left ul { margin-top: 18px; }
+    @media (max-width: 900px) { .tp-set-split { grid-template-columns: 1fr; } .tp-set-right { max-width: 307px; margin: 0 auto; } }
     .guide-caption { font-size: 13px; color: var(--muted); text-align: left; margin-bottom: 28px; }
     .guide-body p { margin-bottom: 14px; }
     .guide-body strong { color: var(--text); }
@@ -130,28 +135,30 @@
   <div class="guide-body">
     <p>Click the gear to open the settings. Everything updates live and is saved automatically. Use the 1-column or 2-column layout button, whichever suits your screen</p>
   </div>
-  <div class="guide-img-row">
-    <figure>
-      <img class="guide-img" src="teleprompter-settings-2col.png" alt="Teleprompter Settings, two-column layout" />
-      <figcaption class="guide-caption">Teleprompter Settings, 2-column layout</figcaption>
-    </figure>
-    <figure>
+  <div class="tp-set-split">
+    <div class="tp-set-left">
+      <figure>
+        <img class="guide-img" src="teleprompter-settings-2col.png" alt="Teleprompter Settings, two-column layout" />
+        <figcaption class="guide-caption">Teleprompter Settings, 2-column layout</figcaption>
+      </figure>
+      <ul class="guide-list">
+        <li><strong>Lines before / after</strong> — Show from 0 to 3 lines either side of the active line</li>
+        <li><strong>Font size, colour and bold</strong> — Text from 12 to 72 px in any colour</li>
+        <li><strong>Scale font with panel</strong> — The text grows or shrinks as you resize the panel</li>
+        <li><strong>Text shadow</strong> — Keeps the text readable over bright pictures, with its own colour</li>
+        <li><strong>Active line highlight and border</strong> — A background and an outline, each with its own colour</li>
+        <li><strong>Cascade</strong> — Lines other than the active one scale down and fade with distance. Set how much with two sliders</li>
+        <li><strong>Background</strong> — An optional solid panel with its own colour and opacity</li>
+        <li><strong>Clickable lines</strong> — Choose whether a click on a line jumps the video</li>
+        <li><strong>Sync offset</strong> <span class="pro-tag">★ Pro</span> — Coarse (seconds) and fine (milliseconds) sliders for captions that run early or late</li>
+        <li><strong>Anchor to video</strong> — The panel follows the video player while you scroll the page (Normal and Cinema view only)</li>
+      </ul>
+    </div>
+    <figure class="tp-set-right">
       <img class="guide-img" src="teleprompter-settings-1col.png" alt="Teleprompter Settings, one-column layout" />
       <figcaption class="guide-caption">Teleprompter Settings, 1-column layout</figcaption>
     </figure>
   </div>
-  <ul class="guide-list">
-    <li><strong>Lines before / after</strong> — Show from 0 to 3 lines either side of the active line</li>
-    <li><strong>Font size, colour and bold</strong> — Text from 12 to 72 px in any colour</li>
-    <li><strong>Scale font with panel</strong> — The text grows or shrinks as you resize the panel</li>
-    <li><strong>Text shadow</strong> — Keeps the text readable over bright pictures, with its own colour</li>
-    <li><strong>Active line highlight and border</strong> — A background and an outline, each with its own colour</li>
-    <li><strong>Cascade</strong> — Lines other than the active one scale down and fade with distance. Set how much with two sliders</li>
-    <li><strong>Background</strong> — An optional solid panel with its own colour and opacity</li>
-    <li><strong>Clickable lines</strong> — Choose whether a click on a line jumps the video</li>
-    <li><strong>Sync offset</strong> <span class="pro-tag">★ Pro</span> — Coarse (seconds) and fine (milliseconds) sliders for captions that run early or late</li>
-    <li><strong>Anchor to video</strong> — The panel follows the video player while you scroll the page (Normal and Cinema view only)</li>
-  </ul>
 </div></div>
 
 <!-- Profiles -->
@@ -203,7 +210,7 @@
     <p class="cta-band-sub"><span class="free-tag">Free</span> to install. Works on any YouTube video with captions</p>
     <div class="install-row">
       <a href="https://chromewebstore.google.com/detail/yt-transcript-search/glinfkmlkgldmmpkocdjgnhamhpidpdc" class="install-btn install-chrome" target="_blank" rel="noopener" title="Add YT Transcript Search to Chrome">🌐 <span>Add to Chrome — Free<span class="install-sub">From the Chrome Web Store</span></span></a>
-      <a href="#" class="install-btn install-edge" title="Coming soon" onclick="return false;">🔷 <span>Add to Edge — Free<span class="install-sub">Coming soon to Microsoft Edge Add-ons</span></span></a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/yt-transcript-search/nalbbpkegbphecgpefjghoionmenejam" class="install-btn install-edge" target="_blank" rel="noopener" title="Add YT Transcript Search to Edge">🔷 <span>Add to Edge — Free<span class="install-sub">From Microsoft Edge Add-ons</span></span></a>
       <a href="purchase.html" class="install-btn install-pro">★ Go Pro</a>
     </div>
   </div>
