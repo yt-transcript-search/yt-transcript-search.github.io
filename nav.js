@@ -3,11 +3,11 @@
    where style.css hides the row of links. The links themselves stay in each page as plain HTML.
    Nothing here touches the Chrome extension. */
 /* Website version shown in every page footer. Change it here and upload nav.js only */
-var YTTS_SITE_VERSION = 'v1.29.3';
+var YTTS_SITE_VERSION = 'v1.0';
 
 (function () {
   'use strict';
-  var BREAKPOINT = 960;
+  var BREAKPOINT = 1040;
 
   var css = [
     '.nav-menu-btn{display:none;margin-left:auto;padding:8px 14px;border-radius:8px;border:1px solid var(--border,#2a2a30);background:transparent;color:var(--text,#f0f0f2);font:600 13px/1 var(--font-body,sans-serif);letter-spacing:0.03em;cursor:pointer;white-space:nowrap;flex-shrink:0}',
